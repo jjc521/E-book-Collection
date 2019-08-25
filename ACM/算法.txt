@@ -1,0 +1,180 @@
+//最大公约数
+int gcd(int a,int b)
+{
+    int t;
+    while(b>0)
+    {
+        t=a%b;
+        a=b;
+        b=t;
+    }
+    return a;
+}
+
+//素数判断
+bool is_prime(int u)
+{
+    if(u==0||u==1)
+        return false;
+    if(u==2)
+        return true;
+    if(u%2==0)
+        return false;
+    for(int i=3;i<sqrt(u);i+=2)
+        if(u%i==0)
+            return false;
+    return true;
+}
+
+//素数筛法
+const int MAXN=1000000+10;
+bool mark[MAXN];
+void sieve_prime()
+{
+    memset(mark,true,sizeof(mark));
+    mark[0]=mark[1]=false;
+    int n=sqrt(MAXN+0.5);
+    for(int i=2; i<n; i++)
+        if(mark[i])
+            for(int j=i*i; j<MAXN; j+=i)
+                mark[j]=false;
+
+}
+
+//扩展欧几里得算法
+int extended_euclid(int a,int b,int &x,int &y)
+{
+    if(b==0)
+    {
+        x=1,y=0;
+        return a;
+    }
+    int g=extended_euclid(b,a%b,y,x);
+    y-=a/b*x;
+    return g;
+}
+
+//0-1背包
+const int MAXN=1000+10,MAXM=10000+10;//最大物品数 最大容量
+int v[MAXN],c[MAXN],f[MAXM];
+int main()
+{
+    int n,m;//物品数 容量
+    scanf("%d%d",&n,&m);
+    for(int i=1;i<=n;i++)
+    {
+        scanf("%d%d",&v[i],&c[i]);//占用容量 物品价值
+    }
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=m;j>=v[i];j--)
+        {
+            f[j]=max(f[j],f[j-v[i]]+c[i]);
+        }
+    }
+    printf("%d",f[m]);
+}
+
+//快速幂
+long qpow(int a,int b)
+{
+	long r=1,base=a;
+	while(b)
+	{
+		if(b&1)
+			r*=base;
+		base*=base;
+		b>=1;
+	}
+	return r;
+}
+
+
+//最短路
+//①floyed
+#define MAXN 100000     //地点数上限
+#define INF 99999999    //定义无穷大,即不存在通路时两点距离
+int e[MAXN][MAXN];
+void floyed()
+{
+    int n,m;
+    scanf("%d%d",&n,&m);
+    
+    //初始化
+    for(int i=1; i<=n; i++)
+        for(int j=1; j<=n; j++)
+            if(i==j)
+                e[i][j]=0;
+            else
+                e[i][j]=INF;
+    int x,y,z;
+    //读入边
+    for(int i=0; i<m; i++)
+    {
+        scanf("%d%d%d",&x,&y,&z);
+        e[x][y]=z;  //若为无向图,则加上e[y][x]=z
+    }
+    //不断更新最短路
+    for(int k=1; k<=n; k++)
+        for(int i=1; i<=n; i++)
+            for(int j=1; j<=n; j++)
+                if(e[i][j]>e[i][k]+e[k][j])
+                    e[i][j]=e[i][k]+e[k][j];
+}
+//②dijkstra
+#define INF 9999999
+#define MAXN 20005
+int e[MAXN][MAXN];
+int dis[MAXN];//记录src->dest距离
+bool book[MAXN];//true表示已寻得最短路,false表示还未寻得
+int dijkstra(int src,int dest,int n)//源点,目标点,地点数
+{
+    for(int i=1;i<=n;i++)
+    {
+        dis[i]=e[src][i];   //初始化估计值
+        book[i]=false;
+    }
+    int MIN,u;//离src最近点距离,标号
+    for(int i=1;i<=n-1;i++) //仅作为计数循环
+    {
+        MIN=INF;
+        for(int j=1;j<=n;j++)
+        {
+            if(!book[j]&&MIN>dis[j])
+            {
+                MIN=dis[j];
+                u=j;
+            }
+        }
+        book[u]=true;//标记最近点为已确定
+        for(int j=1;j<=n;j++)
+        {
+            if(!book[j]&&dis[j]>dis[u]+e[u][j])
+                dis[j]=dis[u]+e[u][j];  //不断松弛
+        }
+    }
+    return dis[dest];
+}
+int main()
+{
+    int n,m,k1,k2;
+    scanf("%d%d%d%d",&n,&m,&k1,&k2);
+
+    for(int i=1; i<=n; i++)
+        for(int j=1; j<=n; j++)
+            if(i==j)
+                e[i][j]=0;
+            else
+                e[i][j]=INF;
+
+    int x,y,z;
+    for(int i=1;i<=m;i++)
+    {
+        scanf("%d%d%d",&x,&y,&z);
+        e[x][y]=z;
+        e[y][x]=z;
+    }
+    int ans=0;
+    ans+=dijkstra(1,k1,n)+dijkstra(k1,k2,n)+dijkstra(k2,n,n);
+    return 0;
+}

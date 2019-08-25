@@ -1,0 +1,22 @@
+#include "bits/stdc++.h"
+using namespace std;
+const int MAXN=1000+5,MAXM=10000+5;
+int v[MAXN],c[MAXM],f[MAXM];
+int main()
+{
+    int n=0,m=0,k=0;
+    scanf("%d %d %d",&n,&m,&k);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d%d",&v[i],&c[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=m;j>=v[i];j--)
+        {
+            f[j]=max(f[j-v[i]]+c[i],f[j]);
+        }
+    }
+    printf("%d\n",f[m]+k);
+    return 0;
+}

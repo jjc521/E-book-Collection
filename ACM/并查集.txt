@@ -1,0 +1,30 @@
+const int Max=1000;
+typedef int ElemType;
+int Parent[Max],Rank[Max];
+int Find(int x)
+{
+int temp = x, root, w;
+//搜寻根节点
+while(Parent[x]!=0) x=Parent[x];
+root=x;
+x=temp;
+//压缩路径
+while(Parent[x]!=0) {
+w=Parent[x];
+Parent[x]=root;
+x=w;
+}
+return root;
+}
+int Union(int x,int y)
+{
+int u, v, root;
+u=Find(x);
+v=Find(y);
+if(Rank[u] <= Rank[v]) {
+root = Parent[u] = v;
+if(Rank[u] == Rank[v]) Rank[v]++;
+}
+else root=Parent[v]=u;
+return root;
+}
