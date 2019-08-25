@@ -20,7 +20,7 @@ bool is_prime(int u)
         return true;
     if(u%2==0)
         return false;
-    for(int i=3;i<sqrt(u);i+=2)
+    for(int i=3; i<sqrt(u); i+=2)
         if(u%i==0)
             return false;
     return true;
@@ -61,13 +61,13 @@ int main()
 {
     int n,m;//物品数 容量
     scanf("%d%d",&n,&m);
-    for(int i=1;i<=n;i++)
+    for(int i=1; i<=n; i++)
     {
         scanf("%d%d",&v[i],&c[i]);//占用容量 物品价值
     }
-    for(int i=1;i<=n;i++)
+    for(int i=1; i<=n; i++)
     {
-        for(int j=m;j>=v[i];j--)
+        for(int j=m; j>=v[i]; j--)
         {
             f[j]=max(f[j],f[j-v[i]]+c[i]);
         }
@@ -78,15 +78,15 @@ int main()
 //快速幂
 long qpow(int a,int b)
 {
-	long r=1,base=a;
-	while(b)
-	{
-		if(b&1)
-			r*=base;
-		base*=base;
-		b>=1;
-	}
-	return r;
+    long r=1,base=a;
+    while(b)
+    {
+        if(b&1)
+            r*=base;
+        base*=base;
+        b>=1;
+    }
+    return r;
 }
 
 
@@ -99,7 +99,7 @@ void floyed()
 {
     int n,m;
     scanf("%d%d",&n,&m);
-    
+
     //初始化
     for(int i=1; i<=n; i++)
         for(int j=1; j<=n; j++)
@@ -129,16 +129,16 @@ int dis[MAXN];//记录src->dest距离
 bool book[MAXN];//true表示已寻得最短路,false表示还未寻得
 int dijkstra(int src,int dest,int n)//源点,目标点,地点数
 {
-    for(int i=1;i<=n;i++)
+    for(int i=1; i<=n; i++)
     {
         dis[i]=e[src][i];   //初始化估计值
         book[i]=false;
     }
     int MIN,u;//离src最近点距离,标号
-    for(int i=1;i<=n-1;i++) //仅作为计数循环
+    for(int i=1; i<=n-1; i++) //仅作为计数循环
     {
         MIN=INF;
-        for(int j=1;j<=n;j++)
+        for(int j=1; j<=n; j++)
         {
             if(!book[j]&&MIN>dis[j])
             {
@@ -147,7 +147,7 @@ int dijkstra(int src,int dest,int n)//源点,目标点,地点数
             }
         }
         book[u]=true;//标记最近点为已确定
-        for(int j=1;j<=n;j++)
+        for(int j=1; j<=n; j++)
         {
             if(!book[j]&&dis[j]>dis[u]+e[u][j])
                 dis[j]=dis[u]+e[u][j];  //不断松弛
@@ -168,7 +168,7 @@ int main()
                 e[i][j]=INF;
 
     int x,y,z;
-    for(int i=1;i<=m;i++)
+    for(int i=1; i<=m; i++)
     {
         scanf("%d%d%d",&x,&y,&z);
         e[x][y]=z;
