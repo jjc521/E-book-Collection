@@ -1,12 +1,12 @@
 0B890330
-dÅÌÈí¼ş±¸·İ °Ù¶ÈÔÆÖ±Á´
+dç›˜è½¯ä»¶å¤‡ä»½ ç™¾åº¦äº‘ç›´é“¾
 
-FTPµØÖ·£ºftp://ftp1.linuxidc.com
+FTPåœ°å€ï¼šftp://ftp1.linuxidc.com
 
-ÓÃ»§Ãû£ºftp1.linuxidc.com
+ç”¨æˆ·åï¼šftp1.linuxidc.com
 
-ÃÜÂë£ºwww.linuxidc.com
+å¯†ç ï¼šwww.linuxidc.com
 
-ÔÚ 2016ÄêLinuxIDC.com\2ÔÂ\Äñ¸çµÄLinuxË½·¿²Ë-»ù´¡Ñ§Ï°Æª(µÚËÄ°æ)¸ßÇåÍêÕûÊéÇ©PDF°æ\
+åœ¨ 2016å¹´LinuxIDC.com\2æœˆ\é¸Ÿå“¥çš„Linuxç§æˆ¿èœ-åŸºç¡€å­¦ä¹ ç¯‡(ç¬¬å››ç‰ˆ)é«˜æ¸…å®Œæ•´ä¹¦ç­¾PDFç‰ˆ\
 
-ÏÂÔØ·½·¨¼û http://www.linuxidc.com/Linux/2013-10/91140.htm
+ä¸‹è½½æ–¹æ³•è§ http://www.linuxidc.com/Linux/2013-10/91140.htm
