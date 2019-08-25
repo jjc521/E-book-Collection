@@ -1,0 +1,3 @@
+certutil -hashfile 文件名 MD5
+
+文件名要写清后缀，等一会md5就出现了
