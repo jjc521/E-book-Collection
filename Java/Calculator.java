@@ -121,7 +121,7 @@ public class Calculator {
 
 		frmJavav = new JFrame();
 		frmJavav.setType(Type.UTILITY);
-		frmJavav.setTitle("¼ÆËãÆ÷");
+		frmJavav.setTitle("è®¡ç®—å™¨");
 		frmJavav.setResizable(false);
 		frmJavav.setBounds((int)(scrw-framew)/2,(int)(scrh-frameh)/2 , frameh, framew);
 		frmJavav.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -136,39 +136,39 @@ public class Calculator {
 		JMenuBar bar=new JMenuBar();
 		frmJavav.setJMenuBar(bar);
 		
-		JMenu caidan=new JMenu("²Ëµ¥");
+		JMenu caidan=new JMenu("èœå•");
 		bar.add(caidan);
 		
-		JMenuItem ctfg=new JMenuItem("´°Ìå·ç¸ñ");
+		JMenuItem ctfg=new JMenuItem("çª—ä½“é£æ ¼");
 		caidan.add(ctfg);
 		ctfg.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				Object[] possibleValues = { "NORMAL", "UTILITY", "POPUP" }; //ÓÃ»§µÄÑ¡ÔñÏîÄ¿
-				Object selectedValue = JOptionPane.showInputDialog(frmJavav, "Ñ¡ÔñÄãĞèÒªµÄ´°Ìå·ç¸ñ", "´°Ìå·ç¸ñÑ¡Ôñ",JOptionPane.INFORMATION_MESSAGE, null, possibleValues, possibleValues[0]);
+				Object[] possibleValues = { "NORMAL", "UTILITY", "POPUP" }; //ç”¨æˆ·çš„é€‰æ‹©é¡¹ç›®
+				Object selectedValue = JOptionPane.showInputDialog(frmJavav, "é€‰æ‹©ä½ éœ€è¦çš„çª—ä½“é£æ ¼", "çª—ä½“é£æ ¼é€‰æ‹©",JOptionPane.INFORMATION_MESSAGE, null, possibleValues, possibleValues[0]);
 				frmJavav.remove(panel);	
 				frmJavav.setContentPane(panel2);
 			}	
 		});
 		
-		JMenuItem exit=new JMenuItem("ÍË³ö");
+		JMenuItem exit=new JMenuItem("é€€å‡º");
 		caidan.add(exit);
 		exit.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				long xz=JOptionPane.showConfirmDialog(frmJavav, "ÒªÍË³öÉ¨À×Âğ?","È·¶¨ÍË³ö",JOptionPane.YES_NO_OPTION);
+				long xz=JOptionPane.showConfirmDialog(frmJavav, "è¦é€€å‡ºå—?","ç¡®å®šé€€å‡º",JOptionPane.YES_NO_OPTION);
 				if(xz==0)
 					System.exit(0);
 			}		
 		});
 		
-		JMenu bangzhu =new JMenu("°ïÖú");
+		JMenu bangzhu =new JMenu("å¸®åŠ©");
 		bar.add(bangzhu);
 		
 		
-		JMenuItem gy=new JMenuItem("¹ØÓÚ");
+		JMenuItem gy=new JMenuItem("å…³äº");
 		bangzhu.add(gy);
 		gy.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				JOptionPane.showMessageDialog(frmJavav, "Èí¼şÃû£º¼ÆËãÆ÷\nÖÆ×÷Ê±¼ä£º2017Äê4ÔÂ16ÈÕ\nÖÆ×÷ÈË£ºÀ¼Öİ´óÑ§2016¼¶¼ÆËã»ú2°à ÓáÍ¦Í¦","°æÈ¨ĞÅÏ¢",JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(frmJavav, "è½¯ä»¶åï¼šè®¡ç®—å™¨\nåˆ¶ä½œæ—¶é—´ï¼š2017å¹´4æœˆ16æ—¥\nåˆ¶ä½œäººï¼šmuyanren907","ç‰ˆæƒä¿¡æ¯",JOptionPane.PLAIN_MESSAGE);
 			}
 		});
 	
@@ -660,7 +660,7 @@ public class Calculator {
 			}
 		});
 		button_10.setBackground(Color.LIGHT_GRAY);
-		button_10.setFont(new Font("ËÎÌå", Font.PLAIN, 10));
+		button_10.setFont(new Font("å®‹ä½“", Font.PLAIN, 10));
 		button_10.setBounds(100, 70, 50, 50);
 		panel.add(button_10);
 
@@ -727,7 +727,7 @@ public class Calculator {
 		button_15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ans.setEuqals(1);
-				// ¾«È·¼ÆËã
+				// ç²¾ç¡®è®¡ç®—
 				switch (ans.getOperation()) {
 				case 1:
 					ans.setAns(BigDecimal.valueOf(ans.getAns()).add(BigDecimal.valueOf(ans.getNum())).doubleValue());
@@ -762,7 +762,7 @@ public class Calculator {
 				}
 				
 				if(ans.getIfequals()!=0){
-					lblNewLabel.setText("´íÎó");
+					lblNewLabel.setText("é”™è¯¯");
 				}
 				else{
 					if (ans.getAns() == Math.round(ans.getAns()))
