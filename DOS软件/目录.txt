@@ -1,0 +1,90 @@
+卷 DATA 的文件夹 PATH 列表
+卷序列号为 467D-D1D4
+D:.
+│  909ii.rar
+│  ase.zip
+│  cced4.ain
+│  cced50.img
+│  cced503.zip
+│  cced5hlp.zip
+│  cced60.exe
+│  ccpb.rar
+│  cxed.zip
+│  dtp.zip
+│  ed95.zip
+│  fz601.rar
+│  hg4.rar
+│  hg6.rar
+│  juren.rar
+│  keyin.rar
+│  p123.zip
+│  pe2.zip
+│  pe3.rar
+│  qedit30.zip
+│  sc50.arj
+│  sidekick.zip
+│  sk20.rar
+│  stt.rar
+│  tbs31.rar
+│  ted12.zip
+│  ue.zip
+│  works.rar
+│  wp52.rar
+│  wp60.rar
+│  ws.zip
+│  ws4.rar
+│  ws6.rar
+│  ytt.txt
+│  编辑与排版软件.txt
+│  
+├─pe2
+│      CPE2.EXE
+│      EXP1
+│      EXP2
+│      EXP3
+│      FYK
+│      NEX
+│      PE11.BAT
+│      PE2.EXE
+│      PE2.HLP
+│      PE2.PRO
+│      PE25.BAT
+│      PE2OVL.EXE
+│      PE2OVL11.EXE
+│      PE2OVL25.EXE
+│      
+├─sidekick
+│      CHKLIST.CPS
+│      SK.COM
+│      SK.HLP
+│      SKINST.COM
+│      SKINST.MSG
+│      
+└─wp60
+    └─WP60
+            INSTALL.DAT
+            INSTALL.EXE
+            INSTALL.LST
+            INSTL60.S01
+            INSTL60.S02
+            INSTL60.S03
+            INSTL60.S04
+            INSTL60.S05
+            INSTL60.S06
+            INSTL60.S07
+            INSTL60.SPN
+            PROGRM60.S01
+            PROGRM60.S02
+            PROGRM60.S03
+            PROGRM60.S04
+            PROGRM60.S05
+            PROGRM60.SPN
+            README.LCN
+            WPCC20US.DLL
+            WPGIUK.HLP
+            WPHY20US.DLL
+            WPINST.EXE
+            WPUS.ICR
+            WPUS.LEX
+            WPUS.THS
+            

@@ -1,0 +1,372 @@
+
+学校________________系________________年级__________专业____________姓名____________
+
+通讯地址__________________________________邮政编码__________________
+
+
+
+━━━━━━━━━━━密━━━━━━━━━━━━━封━━━━━━━━━━━线━━━━━━━━━━━━━━━━━━
+
+
+
+	    天津市１９９１大学生计算机知识及程序设计竟赛预赛试卷（专业组）
+
+
+一. 将下列程序的机器码填写完善(填在空格内) (10分)
+       地址	机器码		     ORG   2000H
+     2000H	DD21_____	     LD    IX,1000H
+     2004H	  3E_____	     LD     A,15
+     2006H	  06_____	     LD     B,10
+     2008H	  05	       LOOP: DEC    B
+     2009H	  20_____	     JR     NZ,LOOP
+     200BH	DD77_____	     LD     (IX-1),A
+     200EH	  76		     HALT
+				     END
+
+二. 图示 Z-80 CPU与 ADC0804 的接口电路. 下面程序用查询法实现A/D转换控
+    制,并将结果存入某个指定的存储单元. (8分)
+
+
+	      (图见附页)
+
+
+		   ORG	1000H
+		   LD HL,DATA	       --------------1
+		   OUT (81H),A	       --------------2
+		   LD BC,DSM	       --------------3
+		   LD IX,TAB	       --------------4
+	  OTHERS:  ADD IX,BC	       --------------5
+		   INC BC	       --------------6
+		   INC IX	       --------------7
+		   IN A,(80H)	       --------------8
+		   AND 01H	       --------------9
+		   JR NZ,OTHERS        --------------10
+		   IN A,81H	       --------------11
+		   LD (HL),A	       --------------12
+		   HALT 	       --------------13
+	  DSM:	   DW  3500H	       --------------14
+	  TAB:	   DW  0002H	       --------------15
+	  DATA:    DS  1
+		   END
+     将合适的指令号填在下面的空格内
+     1.启动A/D转换的指令是__________
+     2.取转换结果的指令是___________
+     3.查询转换是否完成的指令是__________和____________
+     4.转换结果存入指定单元的指令是____________
+
+三. 用Z-80 CTC 对外界输入脉冲进行计数,当计数达到给定值时,使单板机六位
+    显示器中的某几位显示数字8(数字8的编码是00H)控制程序如下: (10分)
+
+		 LD A,23H
+		 LD I,A
+		 LD A,02H
+		 OUT (90H),A
+		 LD A,0CDH
+		 OUT(91H),A
+		 LD A,50
+		 OUT (91H),A
+		 ******
+		 EI
+
+
+
+
+
+
+
+
+
+
+
+	 LOOP:	 HALT
+		 JP  LOOP
+		 ORG  2302H
+		 DW   2100H
+		 ORG  2100H
+		 LD  A,00H
+		 OUT (88H),A
+		 LD A,3AH
+		 OUT (8CH),A
+		 CALL DELAY
+		 EI
+		 RETI
+	 DELAY:  ......
+
+   确定下面空格的正确内容:
+    1.程序中画有******的地方应写______________指令
+    2.CTC中断处理程序的入口地址是_________________
+    3.口地址为91H的CTC工作在______________方式
+    4.口地址为91H的CTC,其时间常数为_______________
+    5.程序中的断点是_______________指令
+
+四. 图示Z-80 CPU 与存储器 I/O接口的连接. 读图确定下列空格的内容(12分)
+
+    1. 存储器M2的地址空间范围_____________
+    2. 存储器M3的地址空间范围_____________
+    3. CTC中CH0的口地址____________
+    4. PIO1中A口控制寄存器的口地址____________
+    5. 图中I/O接口的优先顺序是__________________
+    6. 图中CTC芯片的IEI应接_________________
+
+
+	      (图见附页)
+
+
+五. 图示用8212 I/O接口产生Z-80的RSTP指令.将适当的内容填入下面各空格内
+    (10分)
+
+    1. 8212的INT输出应接Z-80 CPU的___________引脚
+    2. 8212的DO0-7输出应接Z-80 CPU的___________引脚
+    3. 8212的DS2门的两个输入端应接Z-80 CPU的________和_______信号
+    4. 8212的STB输入端应接I/O设备来的_____________信号
+    5. 如图所示I/O设备的中断处理程序入口地址应为________________
+
+
+	  (图见附页)
+
+
+六. 以下是使用DOS时容易遇到的几个问题,请分别提供一种解决方法:(12分)
+
+  1. 在MATRIX.DAT文件中存有点阵打印机的控制码和其它数据用来使打印机打
+     出图形,但由于文件中间可能有些码会被DOS误认为是EOF,所以用下列命令
+     往往不能成功：
+	       COPY MATRIX.DAT PRN:
+     试写出正确命令格式。
+
+
+
+
+
+
+
+
+
+
+
+
+
+  2. 系统当前目录是\MYSELF,试问如何不改变当前目录,不重新启动系统,且不
+     在命令前加上\DOS\的子目录名, 能执行一些\DOS子目录下的命令？
+
+  3. 指出下面的各种操作哪些极有可能使带有病毒的软盘X将病毒带入系统．
+     1)执行X上的某一个EXE文件
+     2)用X盘启动
+     3)检查X盘上的目录
+     4)TYPE X盘上的某一文本文件
+  4. 如果在一个批文件中直接运行另一个批文件, 则第二个批文件运行结束
+     后, 不能返回第一个文件继续运行, 而是直接返回DOS。
+	 例如: 批文件first.bat有如下内容:
+		   .
+		   .
+		   .
+		 second
+		 third
+		   .
+		   .
+		  .
+     则当second为批文件时, third及其以后的内容永远不会执行。
+     试问: 如何解决这类问题?
+
+七. searchinsert 是建立排序二叉树的过程. 填充程序中的横线空白处, 使其
+    成为完整的程序.  (8分)
+	  ......
+	  TYPE
+	    pode=^node;
+	    node=RECORD
+		 key:INTEGER;
+		 left,right:pnode
+		 END;
+	  PROCEDURE searchinsert(x:INTEGER;VAR p:pnode);
+	     BEGIN
+		 IF ________ THEN
+		    BEGIN
+		       new(p);
+		       ______p^  DO
+			 BEGIN
+			   key:=x; left:=NIL; right:=NIL
+			 END
+		    END  ELSE
+		       IF x<p^.key
+			  THEN _________________________
+			  ELSE _________________________
+	     END;
+
+八. 对两个数组A及B执行插入排序, 即将B[1..n]中元素一个个地用二分插入法
+    插入到A[1..p]中去. 若数组A中存有m个有序元素, 且m+n<=p, 试填充下述
+    过程中的横线空白处:  (8分)
+	  PROCEDURE atb(n,m:integer);
+	    BEGIN
+	       l:=1;ro:=m;
+	       FOR i:=1 TO n DO
+		  BEGIN k:=B[i];h:=ro;
+			WHILE l<=h DO
+			 BEGIN mid:=________________;
+			       IF k<A[mid] THEN _____________
+					   ELSE _____________
+			 END;
+			FOR j:=ro DOWNTO l DO
+			    A[_______]:=A[j];
+			A[l]:=k;
+			ro:=____________
+		  END
+	    END;
+
+
+
+
+
+
+
+
+
+
+
+
+九. 下列程序表示对栈进行操作, 请填充空白处, 使其成为完整的程序.(8分)
+
+	    PROGRAM stack (input,output);
+	    TYPE link=^data;
+		 data=RECORD
+		      next:link;
+		      int:integer
+		      END;
+	     VAR p,q:link;i:integer;
+	     BEGIN
+		 _____________;
+		 REPEAT
+		      read(i);new(p);
+		      WITH p^ DO
+			BEGIN
+			   next:=_____;int:=i
+			END;
+		      q:=________
+		  UNTIL i=-1;
+		  WHILE p<>nil DO
+		      BEGIN
+			 writeln(p^.int);
+			 p:=___________
+		      END
+	      END.
+
+十．一个左右对称的十进制数称为回文数．一个回文数至少有三位,例如 121,
+    12321 等．以下程序将一个任意十进制数颠倒相加,然后将其和数再颠倒相
+    加,直至结果为回文数．若相加次数超过1000则不再继续．例如：
+			      68
+			 +    86
+		      ---------------
+			     154
+			 +   451
+		      ---------------
+			     605
+			 +   506
+		     ----------------
+			    1111
+    程序从键盘读入一个十进制数后,能输出最终所得的回文数和颠倒相加的次
+    数, 或当次数超过1000时提示不能得到回文数．请在空格中加入适当语句.
+    (12分)
+
+	 PROGRAM  palin(INPUT,OUTPUT);
+	      VAR  i,j,m,n,js,ibz,isum:INTEGER;
+		   k:ARRAY[1..6] OF INTEGER;
+	      PROCEDURE  convsum;
+		 BEGIN	m:=isum;i:=0;
+			WHILE (i<6) AND (m>0) DO
+			   BEGIN
+			       i:=i+1;_________________;
+			      ________________________
+			   END
+		 END;
+	      BEGIN
+		  READLN(n);
+		  js:=0;ibz:=0;isum:=n;convsum;
+		  WHILE ___________________ DO
+			BEGIN	m:=0;
+			       FOR j:=1 TO i DO m:=m+k[j]*10*(i-j);
+			       isum:=isum+m;___________________;
+			       convsum;ibz:=1;
+			       FOR_________________DO IF ___________________
+							THEN ibz:=0
+			END;
+		   WRITELN(isum,js)
+	      END.
+
+
+
+
+
+
+
+
+
+
+
+
+十一. 阅读下列PASCAL程序, (1) 指出该程序功能.
+			  (2) 设输入数据是:  WE ARE STUDENTS	  @
+      试跟踪程序的执行, 给出程序执行结果. (10分)
+
+	 PROGRAM  copywords(input, output);
+	  CONST   maxlength=20;  endch='@';
+	  TYPE	  wordtype=PACKED ARRAY [1..maxlength] OF char;
+	   VAR	  ch:char;  nextword:wordtype;
+		  size:integer;
+	 PROCEDURE readwords(VAR word:wordtype;VAR length:integer);
+	    CONST   blank=" ";
+	    VAR     fill:integer;
+	    BEGIN
+	      WHILE ch=blank DO read(ch);
+	      length:=0;
+	      WHILE (ch<>endch) AND (ch<>blank) DO
+		   BEGIN
+		      IF length<maxlength THEN
+			  BEGIN
+			      length:=length+1;
+			      word[length]:=ch
+			   END;
+		       read(ch)
+		    END;
+	      FOR fill:=length+1 TO maxlength DO
+		   word[fill]:=blank
+	    END;
+	BEGIN read(ch);
+	      readwords(nextword,size);
+	      WHILE size<>0 DO
+		  BEGIN
+		      writeln(nextword);
+		      readwords(nextword,size)
+		  END
+	END.
+
+ 十二. 1.阅读下列程序段,指出程序功能
+       2.若对 T所指二叉树进行order所提供的操作, 写出其执行结果。(12分)
+
+
+	LABEL  22;
+	CONST  n=100;
+	TYPE   link=^node;
+	       node= RECORD
+		      data:datatype;
+		      Lchild,Rchild:link
+		     END;
+	PROCEDURE  order(VAR p:link);
+	VAR stack:ARRAY[1..n] OF link;
+	    i:integer;
+	BEGIN i:=0;
+	  REPEAT
+	    WHILE P<>NIL DO
+	      BEGIN i:=i+1;
+		IF i>n THEN GOTO 22;
+		stack[i]:=p;
+		p:=p^.Lchild
+	      END;
+	    IF i<>0 THEN
+	      BEGIN P:=stack[i];
+		 writeln(P^.data,`(`,i,`)`);
+		 i:=i-1;
+		 p:=p^.Rchild
+	       END
+	   UNTIL (i=0) AND (P=NIL);
+	   22:	write(`stack full`)
+	END;
+
+

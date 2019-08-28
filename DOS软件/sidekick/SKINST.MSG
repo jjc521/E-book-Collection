@@ -1,0 +1,126 @@
+1                     Installation program for SideKick 1.50
+
+                  Choose installation item from the following:
+
+          Screen type Ё notepad Commands Ё Notepad size Ё right Margin
+
+          Dialer      Ё cOlors           Ё Activate commands
+
+
+                    Enter S, C, N, M, D, O, A or Q to quit:
+7  Duplicate definition. Command no. 
+8  coincides with a non-installable command
+10 Duplicate definition. Coinciding commands are no. 
+11 Commands starting with the same letter must have the same length.
+ Commands in error are no. 
+12 Total maximum length of commands execeeded. Shorten one or more commands.
+13  -> 
+
+
+14 CURSOR MOVEMENTS:
+
+20  Character left               
+21    Alternative                
+22  Character right              
+23  Word left                    
+24  Word right                   
+25  Line up                      
+26  Line down                    
+27  Scroll up                    
+28  Scroll down                  
+29  Page up                      
+30  Page down                    
+31  To left on line              
+32  To right on line             
+33  To top of page               
+34  To bottom of page            
+35  To top of file               
+36  To end of file               
+37  To eof w/time/date stamp     
+38  To begining of block         
+39  To end of block              
+40  To last cursor position      
+
+
+15 INSERT & DELETE:
+
+41  Insert mode off/on           
+42  Insert line                  
+43  Delete line                  
+44  Delete to end of line        
+45  Delete right word            
+46  Delete character under cursor
+47  Delete left character        
+48    Alternative                
+
+
+16 BLOCK COMMANDS:
+
+49  Mark block begin             
+50  Mark block end               
+51  Mark single word             
+52  Hide/display block           
+53  Copy block                   
+54  Move block                   
+55  Delete block                 
+56  Read block from disk         
+57  Write block to disk          
+58  Sort block                   
+59  Print block                  
+60  Paste block                  
+
+17 MISC. EDITING COMMANDS:
+
+61  Save note file               
+62  Tab                          
+63  Repeat last find             
+64  Control character prefix     
+65  Find                         
+66  Find & replace               
+67  Auto tab off/on              
+68  Restore line                 
+69  Time/date stamp              
+70  Graphics on/off              
+71  Set right margin             
+72  Re-format paragraph          
+
+80 Size of note file (1000-50000 characters, ды for no change): 
+81 Modem port (0 for no modem, 1 for COM1:, 2 for COM2:, ды for no change): 
+82 Does your screen blink when the text scrolls? (Y/N, ды for no change): 
+83 Default Notepad right margin (column 1-251, ды for no change): 
+85 Press H to select one of the following modems: 
+86          or any other Hayes compatible modem (300 Baud)
+87 Press J to select the IBM PCjr modem (300 Baud)
+88 Modem selected (H/J/V/A, ды for no change): 
+89 Minimum number of digits (1-80, ды for no change): 
+90 Required character (up to 10 characters, ды for no change): 
+91 Press V to select the VOAD Keyboard Phone (9600 Baud)
+92 Press A to select the AT & T 4000 modem (1200 Baud)
+101 Nothing
+
+120 Borland product upgrade system
+121 Product upgrade complete
+122 Press ды to continue: 
+123 Error in inputfile : 
+124 Syntax error
+125 File to be updated not found : 
+126 Update sheet doesn't match actual file
+127 Wrong file ( file too small ) or syntax error
+128 File name expected
+129 Checksum not correct
+130 Input file FIX does not exist
+131 Too much input or syntax error
+132 Too many bytes in a line
+133 Old and new lines do not match
+
+150 Do you want to install
+151  (Y/N): 
+152 Program files with notepad not opened
+
+200 Choose one of the following displays:
+201 Which display? (0-3 or ды for no change): 
+202 Default display mode
+203 Monochrome display   (includes Hercules card)
+204 Color display 80x25
+205 B/W   display 80x25  (one-color monitor connected to color graphics card)
+
