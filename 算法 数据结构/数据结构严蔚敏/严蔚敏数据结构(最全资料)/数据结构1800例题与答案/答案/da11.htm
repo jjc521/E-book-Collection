@@ -1,0 +1,1301 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="da11.files/filelist.xml">
+<link rel=Edit-Time-Data href="da11.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>第8章   动态存储管理</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>李海军</o:Author>
+  <o:LastAuthor>Legend User</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>100</o:TotalTime>
+  <o:Created>2004-06-27T07:50:00Z</o:Created>
+  <o:LastSaved>2004-06-27T07:50:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>564</o:Words>
+  <o:Characters>3220</o:Characters>
+  <o:Company>烟台大学</o:Company>
+  <o:Lines>26</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3777</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>5.7 磅</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>14.85 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimHei;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("da11.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("da11.files/header.htm") fcs;
+	mso-endnote-separator:url("da11.files/header.htm") es;
+	mso-endnote-continuation-separator:url("da11.files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:39.7pt 1.0cm 42.55pt 42.55pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-even-footer:url("da11.files/header.htm") ef1;
+	mso-footer:url("da11.files/header.htm") f1;
+	mso-paper-source:0;
+	layout-grid:14.85pt .9pt;
+	mso-layout-grid-char-alt:3686;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:826483680;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1887788108 -884549946 -1183174828 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-text:%1、;
+	mso-level-tab-stop:34.5pt;
+	mso-level-number-position:left;
+	margin-left:34.5pt;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-text:（%2）;
+	mso-level-tab-stop:73.5pt;
+	mso-level-number-position:left;
+	margin-left:73.5pt;
+	text-indent:-36.0pt;}
+@list l1
+	{mso-list-id:1595164011;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1463702088 889076370 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-text:%1、;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1716419769;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1633689372 -306152660 -792435026 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-number-format:japanese-counting;
+	mso-level-text:%1．;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l2:level2
+	{mso-level-text:%2．;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:2106226560;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-973187756 -330807102 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-number-format:japanese-counting;
+	mso-level-text:%1．;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+  <o:regrouptable v:ext="edit">
+   <o:entry new="1" old="0"/>
+  </o:regrouptable>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:14.85pt .9pt;mso-layout-grid-char-alt:
+3686'>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:119.2pt;
+mso-char-indent-count:8.0'><span style='font-size:14.0pt;mso-bidi-font-size:
+9.0pt;font-family:黑体;mso-hansi-font-family:宋体'>第十一章<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>文件<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:黑体;
+mso-hansi-font-family:宋体'>一．选择题<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:22.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:191;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-lastrow:yes;height:7.15pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>1.D<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>2.A<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>3.B<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>4.A<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>5.B<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>6.B<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>7.B<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:宋体'>二<span
+lang=EN-US>.</span>判断题<span lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:22.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:191;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>1.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>√<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>2.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>√<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>3.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>×<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>4.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>√<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>5.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>×<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>6.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>×<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>7.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>×<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>8.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>×<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>9.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>×<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>10.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>×<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>11.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>√<span lang=EN-US> <o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-family:黑体;mso-hansi-font-family:宋体'>三．填空题<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'>1</span><span style='font-family:宋体'>．操作系统文件<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>数据库<span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2</span>．单关键字文件<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>多关键字文件<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'>3</span><span style='font-family:宋体'>．（<span
+lang=EN-US>1</span>）数据库<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>（<span lang=EN-US>2</span>）文本<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>（<span
+lang=EN-US>3</span>）顺序组织<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>（<span lang=EN-US>4</span>）随机组织<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span></span>（<span
+lang=EN-US>5</span>）链组织<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;
+</span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>6</span>）随机组织 （<span lang=EN-US>7</span>）<span
+lang=EN-US>m<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span></span>（<span lang=EN-US>8</span>）</span><span
+lang=EN-US style='font-family:Symbol;mso-ascii-font-family:宋体;mso-hansi-font-family:
+宋体;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Symbol'>é</span></span><span lang=EN-US
+style='font-family:宋体'>m/2</span><span lang=EN-US style='font-family:Symbol;
+mso-ascii-font-family:宋体;mso-hansi-font-family:宋体;mso-char-type:symbol;
+mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>ù</span></span><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span></span><span style='font-family:宋体'>（<span
+lang=EN-US>9</span>）<span lang=EN-US>2<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>（<span
+lang=EN-US>10</span>） <span lang=EN-US>k<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'>4</span><span style='font-family:宋体'>．记录<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>数据项<span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>5</span>．串联文件<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>6</span>．第<span
+lang=EN-US>I-1<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7</span>．随机<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'>8</span><span style='font-family:宋体'>．提高查找速度<span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>9</span>．树<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>10</span>．检索记录快<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'>11</span><span style='font-family:宋体'>．（<span
+lang=EN-US>1</span>）关键字<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;
+</span></span>（<span lang=EN-US>2</span>）记录号<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>（<span lang=EN-US>3</span>）记录号<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>（<span
+lang=EN-US>4</span>）顺序<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>（<span
+lang=EN-US>5</span>）直接<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;
+</span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'>12</span><span style='font-family:宋体'>．构造散列函数<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span></span>解决冲突的方法<span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>13</span>．索引集<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>顺序集<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>数据集<span lang=EN-US> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'>14</span><span style='font-family:宋体'>．分配和释放存储空间<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>重组<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>对插入的记录<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>四．应用题<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:宋体'>1</span><span style='font-family:宋体'>．文件是由大量性质相同的记录组成的集合，按记录类型不同可分为操作系统文件和数据库文件。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:宋体'>2</span><span style='font-family:宋体'>．文件的基本组织方式有顺序组织、索引组织、散列组织和链组织。文件的存储结构可以采用将基本组织结合的方法，常用的结构有顺序结构、索引结构、散列结构。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0;
+tab-stops:79.8pt'><span style='font-family:宋体'>（<span lang=EN-US>1</span>） 顺序结构，相应文件为顺序文件，其记录按存入文件的先后次序顺序存放。顺序文件本质上就是顺序表。若逻辑上相邻的两个记录在存储位置上相邻，则为连续文件；若记录之间以指针相链接，则称为串联文件。顺序文件只能顺序存取，要更新某个记录，必须复制整个文件。顺序文件连续存取的速度快，主要适用于顺序存取，批量修改的情况。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>） 带索引的结构，相应文件为索引文件。索引文件包括索引表和数据表，索引表中的索引项包括数据表中数据的关键字和相应地址，索引表有序，其物理顺序体现了文件的逻辑次序，实现了文件的线性结构。索引文件只能是磁盘文件，既能顺序存取，又能隋机存取。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体'>（<span lang=EN-US>3</span>） 散列结构，也称计算寻址结构，相应文件称为散列文件，其记录是根据关键字值经散列函数计算确定其地址，存取速度快，不需索引，节省存储空间。不能顺序存取，只能随机存取。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体'>其它文件均由以上文件派生而得。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体'>文件采用何种存储结构应综合考虑各种因素，如：存储介质类型、记录的类型、大小和关键字的数目以及对文件作何种操作。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>3</span><span style='font-family:宋体'>．在主文件外，再建立索引表指示关键字及其物理记录的地址间一一对应关系。这种由索引表和主文件一起构成的文件称为索引文件。索引表依关键字有序。主文件若按关键字有序称为索引顺序文件，否则称为索引非顺序文件（通常简称索引文件）。索引顺序文件因主文件有序，一般用稀疏索引，占用空间较少。常用索引顺序文件有<span
+lang=EN-US>ISAM</span>和<span lang=EN-US>VSAM</span>。<span lang=EN-US>ISAM</span>采用静态索引结构，而<span
+lang=EN-US>VSAM</span>采用<span lang=EN-US>B+</span>树的动态索引结构。索引文件既能顺序存取，也能随机存取。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>4</span><span style='font-family:宋体'>．在索引文件中，若（数据区）主文件中关键字有序，则文件称为索引顺序文件，参见上题<span
+lang=EN-US>3</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>5</span><span style='font-family:宋体'>．<span lang=EN-US>ISAM</span>是专为磁盘存取设计的文件组织方式。即使主文件关键字有序，但因磁盘是以盘组、柱面和磁道（盘面）三级地址存取的设备，因此通常对磁盘上的数据文件建立盘组、柱面和磁道（盘面）三级索引。在<span
+lang=EN-US>ISAM</span>文件上检索记录时，先从主索引（柱面索引的索引）找到相应柱面索引。再从柱面索引找到记录所在柱面的磁道索引，最后从磁道索引找到记录所在磁道的第一个记录的位置，由此出发在该磁道上进行顺序查找直到查到为止；反之，若找遍该磁道而未找到所查记录，则文件中无此记录。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>6</span><span style='font-family:宋体'>．<span lang=EN-US>ISAM</span>是一种专为磁盘存取设计的文件组织形式，采用静态索引结构，对磁盘上的数据文件建立盘组、柱面、磁道三级索引。<span
+lang=EN-US>ISAM</span>文件中记录按关键字顺序存放，插入记录时需移动记录并将同一磁道上最后的一个记录移至溢出区，同时修改磁道索引项，删除记录只需在存储位置作标记，不需移动记录和修改指针。经过多次插入和删除记录后，文件结构变得不合理，需周期整理<span
+lang=EN-US>ISAM</span>文件。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:宋体'>VSAM</span><span style='font-family:宋体'>文件采用<span
+lang=EN-US>B+</span>树动态索引结构，文件只有控制区间和控制区域等逻辑存储单位，与外存储器中柱面、磁道等具体存储单位没有必然联系。<span
+lang=EN-US>VSAM</span>文件结构包括索引集、顺序集和数据集三部分，记录存于数据集中，顺序集和索引集构成<span lang=EN-US>B+</span>树，作为文件的索引部分可实现顺链查找和从根结点开始的随机查找。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体'>与<span lang=EN-US>ISAM</span>文件相比，<span lang=EN-US>VSAM</span>文件有如下优点：动态分配和释放存储空间，不需对文件进行重组；能保持较高的查找效率，且查找先后插入记录所需时间相同。因此，基于<span
+lang=EN-US>B+</span>树的<span lang=EN-US>VSAM</span>文件通常作为大型索引顺序文件的标准组织。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>7</span><span style='font-family:宋体'>．<span lang=EN-US>ISAM</span>文件有三级索引：磁盘组、柱面和磁盘，柱面索引存放在某个柱面上，若柱面索引较大，占多个磁道时，可建立柱面索引的索引—主索引。故本题中所指的两级索引是盘组和磁道。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>8</span><span style='font-family:宋体'>．倒排文件是一种多关键字的文件，主数据文件按关键字顺序构成串联文件，并建立主关键字索引。对次关键字也建立索引，该索引称为倒排表。倒排表包括两项，一项是次关键字，另一项是具有同一次关键字值的记录的物理记录号（若数据文件非串联文件，而是索引顺序文件—如<span
+lang=EN-US>ISAM</span>，则倒排表中存放记录的主关键字而不是物理记录号）。倒排表作索引的优点是索引记录快，缺点是维护困难。在同一索引表中，不同的关键字其记录数不同，各倒排表的长度不同，同一倒排表中各项长度也不相等。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>9</span><span style='font-family:宋体'>．因倒排文件组织中，倒排表有关键字值及同一关键字值的记录的所有物理记录号，可方便地查询具有同一关键字值的所有记录；而多重表文件中次关键字索引结构不同，删除关键字域后查询性能受到影响。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>10</span><span style='font-family:宋体'>．多重表文件是把索引与链接结合而形成的组织方式。记录按主关键字顺序构成一个串联文件，建立主关键字的索引（主索引）。对每一次关键字建立次关键字索引，具有同一关键字的记录构成一个链表。主索引为非稠密索引，次索引为稠密索引，每个索引项包括次关键字，头指针和链表长度。多重表文件易于编程，也易于插入，但删除繁锁。需在各次关键字链表中删除。倒排文件的特点见上面题<span
+lang=EN-US>8</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>11</span><span style='font-family:宋体'>．倒排表作索引的优点是索引记录快，因为从次关键字值直接找到各相关记录的物理记录号，倒排因此而得名（因通常的查询是从关键字查到记录）。在插入和删除记录时，倒排表随之修改，倒排表中具有相同次关键字的记录号是有序的。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:宋体'>12</span><span style='font-family:宋体'>．排表有两项，一是次关键字值，二是具有相同次关键字值的物理记录号，这些记录号有序且顺序存储，不使用多重表中的指针链接，因而节省了空间。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:-.35pt;mso-para-margin-left:-.03gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>13</span><span style='font-family:宋体'>．（<span
+lang=EN-US>1</span>）顺序文件只能顺序查找，优点是批量检索速度快，不适于单个记录的检索。顺序文件不能象顺序表那样插入、删除和修改，因文件中的记录不能象向量空间中的元素那样“移动”，只能通过复制整个文件实现上述操作。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:.3pt;text-indent:-.3pt;tab-stops:list 0cm'><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>）索引非顺序文件适合随机存取，不适合顺序存取，因主关键字未排序，若顺序存取会引起磁头频繁移动。索引顺序文件是最常用的文件组织，因主文件有序，既可顺序存取也可随机存取。索引非顺序文件是稠密索引，可以“预查找”，索引顺序文件是稀疏索引，不能“预查找”，但由于索引占空间较少，管理要求低，提高了索引的查找速度。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:.3pt;text-indent:-.3pt;tab-stops:list 0cm'><span
+style='font-family:宋体'>（<span lang=EN-US>3</span>）散列文件也称直接存取文件，根据关键字的散列函数值和处理冲突的方法，将记录散列到外存上。这种文件组织只适用于像磁盘那样的直接存取设备，其优点是文件随机存放，记录不必排序，插入、删除方便，存取速度快，无需索引区，节省存储空间。缺点是散列文件不能顺序存取，且只限于简单查询。经多次插入、删除后，文件结构不合理，需重组文件，这很费时。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.65pt;mso-char-indent-count:2.08'><!--[if gte vml 1]><v:line
+ id="_x0000_s1055" style='position:absolute;left:0;text-align:left;z-index:2'
+ from="162pt,156pt" to="162pt,156pt" o:regroupid="1"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:2;left:0px;margin-left:
+215px;margin-top:207px;width:2px;height:2px'><img width=2 height=2
+src="da11.files/image001.gif" v:shapes="_x0000_s1055"></span><![endif]><!--[if gte vml 1]><v:line
+ id="_x0000_s1054" style='position:absolute;left:0;text-align:left;z-index:1'
+ from="162pt,156pt" to="162pt,156pt" o:regroupid="1"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:1;left:0px;margin-left:
+215px;margin-top:207px;width:2px;height:2px'><img width=2 height=2
+src="da11.files/image001.gif" v:shapes="_x0000_s1054"></span><![endif]><span
+lang=EN-US style='font-family:宋体'>14</span><span style='font-family:宋体'>．类似最优二叉树（哈夫曼树），可先合并含较少记录的文件，后合并较多记录的文件，使移动次数减少。见下面的哈夫曼树。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><!--[if gte vml 1]><v:group id="_x0000_s1072"
+ style='position:absolute;left:0;text-align:left;margin-left:148.2pt;
+ margin-top:0;width:162pt;height:107.4pt;z-index:3' coordorigin="3600,3156"
+ coordsize="3240,2148">
+ <v:group id="_x0000_s1027" style='position:absolute;left:5580;top:4248;
+  width:457;height:432' coordorigin="3080,12606" coordsize="457,432"
+  o:regroupid="1">
+  <v:oval id="_x0000_s1028" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1029" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US style='color:black'>F2A</span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1030" style='position:absolute;
+  left:6383;top:4248;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1031" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1032" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US>F5</span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1033" style='position:absolute;
+  left:4500;top:3624;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1034" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1035" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1036" style='position:absolute;
+  left:4500;top:4872;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1037" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1038" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US style='color:black'>F3</span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1039" style='position:absolute;
+  left:4140;top:4248;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1040" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1041" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1042" style='position:absolute;
+  left:3600;top:4872;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1043" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1044" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox style='mso-next-textbox:#_x0000_s1044' inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US style='color:black'>F4</span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1045" style='position:absolute;
+  left:4860;top:4248;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1046" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1047" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US style='color:black'>F1</span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1048" style='position:absolute;
+  left:5940;top:3624;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1049" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1050" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:group id="_x0000_s1051" style='position:absolute;
+  left:5220;top:3156;width:457;height:432' coordorigin="3080,12606"
+  coordsize="457,432" o:regroupid="1">
+  <v:oval id="_x0000_s1052" style='position:absolute;left:3080;top:12606;
+   width:457;height:432' strokeweight=".7pt"/>
+  <v:rect id="_x0000_s1053" style='position:absolute;left:3240;top:12672;
+   width:254;height:266' filled="f" stroked="f">
+   <v:textbox inset="0,0,0,0">
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div>
+      <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    <![endif]></v:textbox>
+  </v:rect></v:group><v:shape id="_x0000_s1064" style='position:absolute;
+  left:4950;top:3510;width:330;height:300;mso-position-horizontal:absolute;
+  mso-position-vertical:absolute' coordsize="330,300" path="m330,l,300e"
+  filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:shape id="_x0000_s1065" style='position:absolute;left:5640;top:3510;
+  width:285;height:285' coordsize="285,285" path="m,l285,285e" filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:line id="_x0000_s1066" style='position:absolute;flip:x' from="4470,3996"
+  to="4650,4308"/>
+ <v:line id="_x0000_s1067" style='position:absolute' from="4815,3996" to="4995,4308"/>
+ <v:shape id="_x0000_s1068" style='position:absolute;left:5760;top:3990;
+  width:255;height:258' coordsize="255,258" path="m255,l,258e" filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:shape id="_x0000_s1069" style='position:absolute;left:6330;top:4005;
+  width:330;height:243' coordsize="330,243" path="m,l330,243e" filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:shape id="_x0000_s1070" style='position:absolute;left:4020;top:4650;
+  width:225;height:330' coordsize="225,330" path="m225,l,330e" filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:line id="_x0000_s1071" style='position:absolute' from="4530,4590"
+  to="4710,4902"/>
+</v:group><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:3;left:197px;top:-1px;width:218px;height:145px'><img
+width=218 height=145 src="da11.files/image002.gif" v:shapes="_x0000_s1072 _x0000_s1027 _x0000_s1028 _x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033 _x0000_s1034 _x0000_s1035 _x0000_s1036 _x0000_s1037 _x0000_s1038 _x0000_s1039 _x0000_s1040 _x0000_s1041 _x0000_s1042 _x0000_s1043 _x0000_s1044 _x0000_s1045 _x0000_s1046 _x0000_s1047 _x0000_s1048 _x0000_s1049 _x0000_s1050 _x0000_s1051 _x0000_s1052 _x0000_s1053 _x0000_s1064 _x0000_s1065 _x0000_s1066 _x0000_s1067 _x0000_s1068 _x0000_s1069 _x0000_s1070 _x0000_s1071"></span><![endif]><span
+lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:16.5pt'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>15</span><span
+style='font-family:宋体'>．<span lang=EN-US>[</span>问题分析<span lang=EN-US>]</span></span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>在职务项中增加一个指针项，指向其领导者。因题目中未提出具体的隶属关系，如哪个系的系主任，哪个系哪个室的室主任，哪个室的教员等。这里假设每个室主任隶属于他前边离他最近的那个系主任，每个教员隶属于他前边离他最近的那个室主任，见下面多重表文件。在职称项中增加一个指针项，指向同一职称的下一个职工，增加一个次关键字索引表：</span></p>
+
+<p class=MsoNormal style='margin-left:5.7pt;mso-para-margin-left:.5gd;
+text-indent:21.75pt'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span></p>
+
+<p class=MsoNormal style='margin-left:5.7pt;mso-para-margin-left:.5gd;
+text-indent:21.75pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:5.7pt;mso-para-margin-left:.5gd;
+text-indent:21.75pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:5.7pt;mso-para-margin-left:.5gd;
+text-indent:21.75pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:62.7pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr>
+  <td width=87 valign=top style='width:65.2pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>关键字</span><span lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>头指针</span><span lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>长度</span><span lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=87 valign=top style='width:65.2pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:11.4pt;mso-char-indent-count:1.0'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>讲师</span><span lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span>001<o:p></o:p></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=87 valign=top style='width:65.2pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-family:宋体'>副教授<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span>004<o:p></o:p></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-lastrow:yes'>
+  <td width=87 valign=top style='width:65.2pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-family:宋体'>教授<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span>002<o:p></o:p></span></p>
+  </td>
+  <td width=87 valign=top style='width:65.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span>6<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:5.7pt;mso-para-margin-left:.5gd;
+text-indent:21.75pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>“职称”索引表<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:5.7pt;mso-para-margin-left:.5gd;
+text-indent:21.75pt'><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:42.65pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='page-break-inside:avoid;height:15.75pt'>
+  <td width=68 valign=top style='width:51.3pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>记录号</span></p>
+  </td>
+  <td width=68 valign=top style='width:51.3pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>职工号</span></p>
+  </td>
+  <td width=82 valign=top style='width:61.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>职工姓名</span></p>
+  </td>
+  <td width=137 colspan=2 valign=top style='width:102.6pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>职务</span></p>
+  </td>
+  <td width=137 colspan=2 valign=top style='width:102.6pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>职称</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-lastrow:yes;height:15.75pt'>
+  <td width=68 valign=top style='width:51.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>01</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>02</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>03</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>04</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>05</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>06</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>07</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>08</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>09</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>10</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=68 valign=top style='width:51.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>001</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>002</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>003</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>004</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>005</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>006</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>007</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>008</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>009</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>010</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>…</span></p>
+  </td>
+  <td width=82 valign=top style='width:61.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>张军</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>沈灵</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>叶明</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>张莲</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>叶宏</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>周芳</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>刘光</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>黄兵</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>李民</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>赵松</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>…</span></p>
+  </td>
+  <td width=68 valign=top style='width:51.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教员</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>系主任</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>校长</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>室主任</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>系主任</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教员</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>系主任</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教员</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>室主任</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教员</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>…</span></p>
+  </td>
+  <td width=68 valign=top style='width:51.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>04</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>03</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>&Ugrave;</span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>02</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>03</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>04</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>03</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>04</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>07</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>09</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=68 valign=top style='width:51.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>讲师</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>副教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>讲师</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>副教授</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>…</span></p>
+  </td>
+  <td width=68 valign=top style='width:51.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>08</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>03</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>05</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>10</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>06</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>07</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>09</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>&Ugrave;</span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>&Ugrave;</span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>&Ugrave;</span></span></p>
+  </td>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=68 style='border:none'></td>
+  <td width=68 style='border:none'></td>
+  <td width=82 style='border:none'></td>
+  <td width=68 style='border:none'></td>
+  <td width=68 style='border:none'></td>
+  <td width=68 style='border:none'></td>
+  <td width=68 style='border:none'></td>
+ </tr>
+ <![endif]>
+</table>
+
+<p class=MsoNormal style='margin-left:5.7pt;mso-para-margin-left:.5gd;
+text-indent:21.75pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>多重表文件<span lang=EN-US><o:p></o:p></span></span></p>
+
+</div>
+
+</body>
+
+</html>

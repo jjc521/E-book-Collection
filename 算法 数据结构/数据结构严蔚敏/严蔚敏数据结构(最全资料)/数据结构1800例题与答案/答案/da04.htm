@@ -1,0 +1,2688 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="da04.files/filelist.xml">
+<link rel=Edit-Time-Data href="da04.files/editdata.mso">
+<link rel=OLE-Object-Data href="da04.files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>第四章 串 （参考答案）</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>liuying</o:Author>
+  <o:LastAuthor>Legend User</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>921</o:TotalTime>
+  <o:LastPrinted>2004-02-12T07:36:00Z</o:LastPrinted>
+  <o:Created>2004-06-27T07:45:00Z</o:Created>
+  <o:LastSaved>2004-06-27T07:45:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2550</o:Words>
+  <o:Characters>14540</o:Characters>
+  <o:Company>烟台大学</o:Company>
+  <o:Lines>121</o:Lines>
+  <o:Paragraphs>34</o:Paragraphs>
+  <o:CharactersWithSpaces>17056</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>5.7 磅</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>7.55 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimHei;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("da04.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("da04.files/header.htm") fcs;
+	mso-endnote-separator:url("da04.files/header.htm") es;
+	mso-endnote-continuation-separator:url("da04.files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 1.0cm 1.0cm 42.55pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-even-header:url("da04.files/header.htm") eh1;
+	mso-header:url("da04.files/header.htm") h1;
+	mso-even-footer:url("da04.files/header.htm") ef1;
+	mso-footer:url("da04.files/header.htm") f1;
+	mso-first-header:url("da04.files/header.htm") fh1;
+	mso-first-footer:url("da04.files/header.htm") ff1;
+	mso-paper-source:0;
+	layout-grid:15.1pt .9pt;
+	mso-layout-grid-char-alt:3686;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:360983809;
+	mso-list-type:hybrid;
+	mso-list-template-ids:748088148 -2122970270 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-number-format:japanese-counting;
+	mso-level-text:%1．;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l1
+	{mso-list-id:461576872;
+	mso-list-type:hybrid;
+	mso-list-template-ids:319170158 798508712 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-text:%1;
+	mso-level-tab-stop:126.75pt;
+	mso-level-number-position:left;
+	margin-left:126.75pt;
+	text-indent:-31.5pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:15.1pt .9pt;mso-layout-grid-char-alt:
+3686'>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-bidi-font-weight:
+bold'>第四章 串<span lang=EN-US> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:宋体'>一、选择题<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:23.3pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:191;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes;
+  height:7.15pt'>
+  <td width=53 valign=top style='width:39.55pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>1.B<o:p></o:p></span></p>
+  </td>
+  <td width=53 valign=top style='width:39.65pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>2.E<o:p></o:p></span></p>
+  </td>
+  <td width=53 valign=top style='width:39.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>3.C<o:p></o:p></span></p>
+  </td>
+  <td width=53 valign=top style='width:39.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>4.A<o:p></o:p></span></p>
+  </td>
+  <td width=53 valign=top style='width:39.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>5.C<o:p></o:p></span></p>
+  </td>
+  <td width=49 valign=top style='width:36.45pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>6.A<o:p></o:p></span></p>
+  </td>
+  <td width=45 valign=top style='width:33.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>7.1D<o:p></o:p></span></p>
+  </td>
+  <td width=45 valign=top style='width:33.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>7.2F<o:p></o:p></span></p>
+  </td>
+  <td width=65 valign=top style='width:49.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>8.B</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>注<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=46 valign=top style='width:34.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>9.D<o:p></o:p></span></p>
+  </td>
+  <td width=45 valign=top style='width:33.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>10.B<o:p></o:p></span></p>
+  </td>
+  <td width=45 valign=top style='width:33.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span
+style='mso-bidi-font-size:10.5pt;font-family:宋体'>注：子串的定义是：串中任意个连续的字符组成的子序列，并规定空串是任意串的子串，任意串是其自身的子串。</span><span
+style='font-family:宋体'>若字符串长度为<span lang=EN-US>n</span>（<span lang=EN-US>n&gt;0</span>），长为<span
+lang=EN-US>n</span>的子串有<span lang=EN-US>1</span>个，长为<span lang=EN-US>n-1</span>的子串有<span
+lang=EN-US>2</span>个，长为<span lang=EN-US>n-2</span>的子串有<span lang=EN-US>3</span>个，……，长为<span
+lang=EN-US>1</span>的子串有<span lang=EN-US>n</span>个。由于空串是任何串的子串，所以本题的答案为：<span
+lang=EN-US>8*</span>（<span lang=EN-US>8+1</span>）<span lang=EN-US>/2+1=37</span>。故选<span
+lang=EN-US>B</span>。但某些教科书上认为“</span><span style='mso-bidi-font-size:10.5pt;
+font-family:宋体'>空串是任意串的子串</span><span lang=EN-US style='font-family:宋体'>”</span><span
+style='font-family:宋体'>无意义，所以认为选<span lang=EN-US>C</span>。为避免考试中的二意性，编者认为第<span
+lang=EN-US>9</span>题出得好。</span><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:宋体'>二、判断题<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:23.3pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:191;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=47 valign=top style='width:35.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>1.</span><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体'>√<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=52 valign=top style='width:39.1pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>2.√<o:p></o:p></span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'>3.√<o:p></o:p></span></p>
+  </td>
+  <td width=52 valign=top style='width:39.1pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=53 valign=top style='width:39.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=52 valign=top style='width:39.1pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=53 valign=top style='width:39.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+  font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span style='font-family:宋体'>三．填空题<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span lang=EN-US style='font-family:宋体'>1</span><span style='font-family:
+宋体'>．<span lang=EN-US>(1) </span>由空格字符（<span lang=EN-US>ASCII</span>值<span
+lang=EN-US>32</span>）所组成的字符串<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>(2)</span>空格个数<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2</span>．字符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span lang=EN-US style='font-family:宋体'>3</span><span style='font-family:
+宋体'>．任意个连续的字符组成的子序列<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span>4</span>．<span lang=EN-US>5<span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>5.O(m+n)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>6</span><span
+style='font-family:宋体'>．<span lang=EN-US>01122312<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>7</span>．<span lang=EN-US>01010421<span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>8</span>．<span lang=EN-US>(1)</span>模式匹配<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>(2)</span>模式串<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span lang=EN-US style='font-family:宋体'>9</span><span style='font-family:
+宋体'>．<span lang=EN-US>(1)</span>其数据元素都是字符<span lang=EN-US>(2)</span>顺序存储<span
+lang=EN-US>(3)</span>和链式存储<span lang=EN-US>(4)</span>串的长度相等且两串中对应位置的字符也相等<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span lang=EN-US style='font-family:宋体'>10</span><span style='font-family:
+宋体'>．两串的长度相等且两串中对应位置的字符也相等。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span lang=EN-US style='font-family:宋体'>11</span><span style='font-family:
+宋体'>．<span lang=EN-US>’xyxyxywwy’<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span>12</span>．<span lang=EN-US>*s++=*t++
+</span>或（<span lang=EN-US>*s++=*t++</span>）<span lang=EN-US>!=</span>‘<span
+lang=EN-US>\0</span>’<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;text-indent:-11.4pt;mso-char-indent-count:
+-1.0'><span lang=EN-US style='font-family:宋体'>13</span><span style='font-family:
+宋体'>．（<span lang=EN-US>1</span>）<b style='mso-bidi-font-weight:normal'><span
+lang=EN-US>char</span></b><span lang=EN-US> s[ ]<span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(2) j++ <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>(3) i &gt;= j<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>14</span><span
+style='font-family:宋体'>．<span lang=EN-US>[</span>题目分析<span lang=EN-US>]</span>本题算法采用顺序存储结构求串<span
+lang=EN-US>s</span>和串<span lang=EN-US>t</span>的最大公共子串。串<span lang=EN-US>s</span>用<span
+lang=EN-US>i</span>指针（<span lang=EN-US>1&lt;=i&lt;=s.len</span>）。<span
+lang=EN-US>t</span>串用<span lang=EN-US>j</span>指针（<span lang=EN-US>1&lt;=j&lt;=t.len</span>）。算法思想是对每个<span
+lang=EN-US>i</span>（<span lang=EN-US>1&lt;=i&lt;=s.len</span>，即程序中第一个<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>WHILE</span></b>循环），来求从<span
+lang=EN-US>i</span>开始的连续字符串与从<span lang=EN-US>j</span>（<span lang=EN-US>1&lt;=j&lt;=t.len</span>，即程序中第二个Ｗ<span
+lang=EN-US>HILE</span>循环）开始的连续字符串的最大匹配。程序中第三个（即最内层）的<b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>WHILE</span></b>循环，是当<span lang=EN-US>s</span>中某字符（<span
+lang=EN-US>s</span>［<span lang=EN-US>i</span>］）与<span lang=EN-US>t</span>中某字符（<span
+lang=EN-US>t</span>［<span lang=EN-US>j</span>］）相等时，求出局部公共子串。若该子串长度大于已求出的最长公共子串（初始为０），则最长公共子串的长度要修改。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd;
+text-indent:11.15pt;mso-char-indent-count:.98'><span style='font-family:宋体'>程序（<span
+lang=EN-US>a</span>）：（<span lang=EN-US>1</span>）（<span lang=EN-US>i+k&lt;=s.len</span>）<span
+lang=EN-US>AND(j+k&lt;=t.len) AND(s[i+k]=t[j+k])<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>如果在<span
+lang=EN-US>s</span>和<span lang=EN-US>t</span>的长度内，对应字符相等，则指针<span lang=EN-US>k </span>后移（加<span
+lang=EN-US>1</span>）。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>）<span lang=EN-US>con:=false <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span>//s</span>和<span lang=EN-US>t</span>对应字符不等时置标记退出<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>（<span lang=EN-US>3</span>）<span
+lang=EN-US>j:=j+k <span style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span>//</span>在<span
+lang=EN-US>t</span>串中，从第<span lang=EN-US>j+k</span>字符再与<span lang=EN-US>s[i]</span>比较<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>（<span lang=EN-US>4</span>）<span
+lang=EN-US>j:=j+1<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//t</span>串取下一字符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd;
+text-indent:61.35pt;mso-char-indent-count:5.38'><span style='font-family:宋体'>（<span
+lang=EN-US>5</span>）<span lang=EN-US>i</span>：<span lang=EN-US>=i+1<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//s</span>串指针<span
+lang=EN-US>i</span>后移（加<span lang=EN-US>1</span>）。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd'><span
+style='font-family:宋体'>　程序（<span lang=EN-US>b</span>）：<span lang=EN-US>(1)
+i+k&lt;=s.len &amp;&amp; j+k&lt;=t.len &amp;&amp; s[i+k]==t[j+k]<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span>所有注释同上（<span lang=EN-US>a</span>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:11.4pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(2) con=0<span style='mso-spacerun:yes'>&nbsp; </span>(3) j+=k<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>(4) j++<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>(5) i++<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'>15</span><span style='font-family:宋体'>．（<span
+lang=EN-US>1</span>）<span lang=EN-US>0<span style='mso-spacerun:yes'>&nbsp;
+</span></span>（<span lang=EN-US>2</span>）<span lang=EN-US>next[k]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'>16</span><span style='font-family:宋体'>．（<span
+lang=EN-US>1</span>）<span lang=EN-US>i</span>：<span lang=EN-US>=i+1<span
+style='mso-spacerun:yes'>&nbsp; </span></span>（<span lang=EN-US>2</span>）<span
+lang=EN-US>j:=j+1<span style='mso-spacerun:yes'>&nbsp; </span>(3)i:=i-j+2<span
+style='mso-spacerun:yes'>&nbsp; </span>(4)j:=1;<span
+style='mso-spacerun:yes'>&nbsp; </span>(5)i-mt</span>（或<span lang=EN-US>i:=i-j+1</span>）<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span>(6)0<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'>17.</span><span style='font-family:宋体'>程序中递归调用<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>1</span>）<span lang=EN-US>ch1&lt;&gt;midch<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span>当读入不是分隔符<span lang=EN-US>&amp;</span>和输入结束符<span
+lang=EN-US>$</span>时，继续读入字符<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>）<span lang=EN-US>ch1=ch2<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span>读入分隔符<span lang=EN-US>&amp;</span>后，判<span
+lang=EN-US style='color:red'>ch1</span>是否等于<span lang=EN-US>ch2</span>，得出真假结论。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>3</span>）<span lang=EN-US>answer</span>：<span
+lang=EN-US>=true<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>4</span>）<span lang=EN-US>answer</span>：<span
+lang=EN-US>=false<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>5</span>）<span lang=EN-US>read</span>（<span
+lang=EN-US>ch</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>6</span>）<span lang=EN-US>ch=endch<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'>18</span><span style='font-family:宋体'>．（<span
+lang=EN-US>1</span>）<span lang=EN-US>initstack</span>（<span lang=EN-US>s</span>）<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span>/</span>／栈<span
+lang=EN-US>s</span>初始化为空栈。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span style='font-family:宋体'>　<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span>(2) setnull (exp) <span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span>//</span>串<span lang=EN-US>exp</span>初始化为空串。<span
+lang=EN-US> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:2.5gd;
+text-indent:-5.7pt;mso-char-indent-count:-.5'><span lang=EN-US
+style='font-family:宋体'>(3) ch in opset<span style='mso-spacerun:yes'>&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>判取出字符是否是操作符。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>(4) push (s,ch)<span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>//</span><span
+style='font-family:宋体'>如<span lang=EN-US>ch</span>是运算符，则入运算符栈<span lang=EN-US>s</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>(5) sempty (s)<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>//</span><span
+style='font-family:宋体'>判栈<span lang=EN-US>s</span>是否为空。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>(6) succ := false <span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>//</span><span
+style='font-family:宋体'>若读出<span lang=EN-US>ch</span>是操作数且栈为空，则按出错处理。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>(7) exp<span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(8)ch<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span><span style='font-family:宋体'>若<span
+lang=EN-US>ch</span>是操作数且栈非空，则形成部分中缀表达式。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>(9) exp<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(10) gettop(s) //</span><span style='font-family:宋体'>取栈顶操作符。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;mso-para-margin-left:.5gd;
+text-indent:-28.5pt;mso-char-indent-count:-2.5'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>(11) pop(s) <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span>//</span><span
+style='font-family:宋体'>操作符取出后，退栈。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:114.0pt;mso-para-margin-left:.5gd;
+text-indent:-108.3pt;mso-char-indent-count:-9.5'><span style='font-family:宋体'>　　<span
+lang=EN-US>(12&shy;) sempty(s)</span>　 <span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>//</span>将<span
+lang=EN-US>pre</span>的最后一个字符（操作数）加入到中缀式<span lang=EN-US>exp</span>的最后。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:114.0pt;mso-para-margin-left:.5gd;
+text-indent:-108.3pt;mso-char-indent-count:-9.5'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:黑体;mso-hansi-font-family:宋体'>四．应用题<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　１．串是零个至多个字符组成的有限序列。从数据结构角度讲，串属于线性结构。与线性表的特殊性在于串的元素是字符。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　２．空格是一个字符，其<span lang=EN-US>ASCII</span>码值是<span
+lang=EN-US>32</span>。空格串是由空格组成的串，其长度等于空格的个数。空串是不含任何字符的串，即空串的长度是零。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　３．</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>最优的</span><span lang=EN-US style='font-family:宋体'>T(m,n)</span><span
+style='font-family:宋体'>是<span lang=EN-US>O</span>（<span lang=EN-US>n</span>）。串<span
+lang=EN-US>S2</span>是串<span lang=EN-US>S1</span>的子串，且在<span lang=EN-US>S1</span>中的位置是<span
+lang=EN-US>1</span>。开始求出最大公共子串的长度恰是串<span lang=EN-US>S2</span>的长度<span
+style='color:red'>，一般情况下，<span lang=EN-US>T(m,n) =O(m*n)</span>。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　４．朴素的模式匹配（<span lang=EN-US>Brute</span>－<span
+lang=EN-US>Force</span>）时间复杂度是Ｏ（<span lang=EN-US>m</span>＊<span lang=EN-US>n</span>），<span
+lang=EN-US>KMP</span>算法有一定改进，时间复杂度达到Ｏ（<span lang=EN-US>m</span>＋<span
+lang=EN-US>n</span>）。本题也可采用从后面匹配的方法，即从右向左扫描，比较６次成功。另一种匹配方式是从左往右扫描，但是先比较模式串的最后一个字符，若不等，则模式串后移；若相等，再比较模式串的第一个字符，若第一个字符也相等，则从模式串的第二个字符开始，向右比较，直至相等或失败。若失败，模式串后移，再重复以上过程。按这种方法，本题比较<span
+lang=EN-US>18</span>次成功。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　５．<span lang=EN-US>KMP</span>算法主要优点是主串指针不回溯。当主串很大不能一次读入内存且经常发生部分匹配时，<span
+lang=EN-US>KMP</span>算法的优点更为突出．<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　６．模式串的<span lang=EN-US>next</span>函数定义如下：<span
+lang=EN-US> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　　　<span lang=EN-US>next</span>［<span
+lang=EN-US>j</span>］<span lang=EN-US>=<sub><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:351.75pt;
+ height:60pt' o:ole="">
+ <v:imagedata src="da04.files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=469 height=80
+src="da04.files/image002.gif" v:shapes="_x0000_i1025"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1149856307">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>根据此定义，可求解模式串<span lang=EN-US>t</span>的<span lang=EN-US>next</span>和<span
+lang=EN-US>nextval</span>值如下：<span lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:34.95pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:191;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=119 valign=top style='width:89.25pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>j</span></p>
+  </td>
+  <td width=286 valign=top style='width:214.2pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>1<span style='mso-spacerun:yes'>&nbsp;
+  </span>2<span style='mso-spacerun:yes'>&nbsp; </span>3<span
+  style='mso-spacerun:yes'>&nbsp; </span>4<span style='mso-spacerun:yes'>&nbsp;
+  </span>5<span style='mso-spacerun:yes'>&nbsp; </span>6<span
+  style='mso-spacerun:yes'>&nbsp; </span>7<span style='mso-spacerun:yes'>&nbsp;
+  </span>8<span style='mso-spacerun:yes'>&nbsp; </span>9<span
+  style='mso-spacerun:yes'>&nbsp; </span>10 11 12 </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=119 valign=top style='width:89.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>t</span><span style='font-family:宋体;
+  mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>串</span><span
+  lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width=286 valign=top style='width:214.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>a<span style='mso-spacerun:yes'>&nbsp;
+  </span>b<span style='mso-spacerun:yes'>&nbsp; </span>c<span
+  style='mso-spacerun:yes'>&nbsp; </span>a<span style='mso-spacerun:yes'>&nbsp;
+  </span>a<span style='mso-spacerun:yes'>&nbsp; </span>b<span
+  style='mso-spacerun:yes'>&nbsp; </span>b<span style='mso-spacerun:yes'>&nbsp;
+  </span>a<span style='mso-spacerun:yes'>&nbsp; </span>b<span
+  style='mso-spacerun:yes'>&nbsp; </span><span
+  style='mso-spacerun:yes'>&nbsp;</span>c<span style='mso-spacerun:yes'>&nbsp;
+  </span>a<span style='mso-spacerun:yes'>&nbsp; </span>b</span><span
+  lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=119 valign=top style='width:89.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>next[j]</span><span lang=EN-US
+  style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width=286 valign=top style='width:214.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>0<span style='mso-spacerun:yes'>&nbsp;
+  </span>1<span style='mso-spacerun:yes'>&nbsp; </span>1<span
+  style='mso-spacerun:yes'>&nbsp; </span>1<span style='mso-spacerun:yes'>&nbsp;
+  </span>2<span style='mso-spacerun:yes'>&nbsp; </span>2<span
+  style='mso-spacerun:yes'>&nbsp; </span>3<span style='mso-spacerun:yes'>&nbsp;
+  </span>1<span style='mso-spacerun:yes'>&nbsp; </span>2<span
+  style='mso-spacerun:yes'>&nbsp; </span>3<span style='mso-spacerun:yes'>&nbsp;
+  </span>4<span style='mso-spacerun:yes'>&nbsp; </span>5</span><span
+  lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=119 valign=top style='width:89.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>nextval[j]</span><span lang=EN-US
+  style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width=286 valign=top style='width:214.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>0<span style='mso-spacerun:yes'>&nbsp;
+  </span>1<span style='mso-spacerun:yes'>&nbsp; </span>1<span
+  style='mso-spacerun:yes'>&nbsp; </span>0<span style='mso-spacerun:yes'>&nbsp;
+  </span>2<span style='mso-spacerun:yes'>&nbsp; </span>1<span
+  style='mso-spacerun:yes'>&nbsp; </span>3<span style='mso-spacerun:yes'>&nbsp;
+  </span>0<span style='mso-spacerun:yes'>&nbsp; </span>1<span
+  style='mso-spacerun:yes'>&nbsp; </span>1<span style='mso-spacerun:yes'>&nbsp;
+  </span>0<span style='mso-spacerun:yes'>&nbsp; </span><span style='color:red'>5</span></span><span
+  lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>7</span><span style='font-family:宋体'>．解法同上题<span
+lang=EN-US>6</span>，其<span lang=EN-US>next</span>和<span lang=EN-US>nextval</span>值分别为<span
+lang=EN-US>0112123422</span>和<span lang=EN-US>0102010422</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>8</span><span style='font-family:宋体'>．解法同题<span
+lang=EN-US>6</span>，<span lang=EN-US>t</span>串的<span lang=EN-US>next</span>和<span
+lang=EN-US>nextval</span>函数值分别为<span lang=EN-US>0111232</span>和<span
+lang=EN-US>0110132</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>9</span><span style='font-family:宋体'>．解法同题<span
+lang=EN-US>6</span>，其<span lang=EN-US>next</span>和<span lang=EN-US>nextval </span>值分别为<span
+lang=EN-US>011123121231</span>和<span lang=EN-US>011013020131</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>10</span><span style='font-family:宋体'>．<span lang=EN-US
+style='color:red'>p1</span>的<span lang=EN-US>next</span>和<span lang=EN-US>nextval</span>值分别为：<span
+lang=EN-US>0112234</span>和<span lang=EN-US>0102102</span>；<span lang=EN-US
+style='color:red'>p2</span>的<span lang=EN-US>next</span>和<span lang=EN-US>nextval</span>值分别为：<span
+lang=EN-US>0121123</span>和<span lang=EN-US>0021002</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>11</span><span style='font-family:宋体'>．<span lang=EN-US>next</span>数组值为<span
+lang=EN-US>011234567<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>改进后的<span
+lang=EN-US>next</span>数组信息值为<span lang=EN-US>010101017</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>12</span><span style='font-family:宋体'>．<span lang=EN-US>011122312</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>13</span><span style='font-family:宋体'>．<span lang=EN-US>next</span>定义见题上面<span
+lang=EN-US>6</span>和下面题<span lang=EN-US>20</span>。串<span lang=EN-US>p</span>的<span
+lang=EN-US>next</span>函数值为：<span lang=EN-US>01212345634</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'>14</span><span style='font-family:宋体'>．（<span
+lang=EN-US>1</span>）<span lang=EN-US>S</span>的<span lang=EN-US>next</span>与<span
+lang=EN-US>nextval</span>值分别为<span lang=EN-US>012123456789</span>和<span
+lang=EN-US>002002002009</span>，<span lang=EN-US>p</span>的<span lang=EN-US>next</span>与<span
+lang=EN-US>nextval</span>值分别为<span lang=EN-US>012123</span>和<span lang=EN-US>002003</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:208.5pt'><span lang=EN-US style='font-family:
+宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-family:
+宋体'>（<span lang=EN-US>2</span>）利用<span lang=EN-US>BF</span>算法的匹配过程：<span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>利用<span lang=EN-US>KMP</span>算法的匹配过程：<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;tab-stops:181.8pt'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>第一趟匹配：<span lang=EN-US> aabaabaabaac<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>第一趟匹配：<span lang=EN-US>aabaabaabaac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>aabaac(i=6,j=6)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>aabaac(i=6,j=6)
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:166.5pt'><span lang=EN-US style='font-family:
+宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-family:
+宋体'>第二趟匹配：<span lang=EN-US> aabaabaabaac<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>第二趟匹配：<span lang=EN-US>aabaabaabaac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:166.5pt'><span lang=EN-US style='font-family:
+宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>aa(i=3,j=2)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(aa)baac <o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:166.5pt'><span lang=EN-US style='font-family:
+宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-family:
+宋体'>第三趟匹配：<span lang=EN-US> aabaabaabaac<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>第三趟匹配：<span lang=EN-US>aabaabaabaac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:57.0pt;mso-char-indent-count:5.0;
+tab-stops:166.5pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>a(i=3,j=1)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(</span><span style='font-family:宋体'>成功<span lang=EN-US>) (aa)baac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:22.35pt;
+mso-char-indent-count:1.96'><span style='font-family:宋体'>第四趟匹配：<span
+lang=EN-US> aabaabaabaac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='margin-left:11.4pt;mso-para-margin-left:
+1.0gd;text-align:left;text-indent:45.6pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>aabaac(i=9,j=6)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:22.35pt;
+mso-char-indent-count:1.96'><span style='font-family:宋体'>第五趟匹配：<span
+lang=EN-US> aabaabaabaac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='margin-left:11.4pt;mso-para-margin-left:
+1.0gd;text-align:left;text-indent:51.2pt;mso-char-indent-count:4.49'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>aa(i=6,j=2)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:22.35pt;
+mso-char-indent-count:1.96'><span style='font-family:宋体'>第六趟匹配：<span
+lang=EN-US> aabaabaabaac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='margin-left:11.4pt;mso-para-margin-left:
+1.0gd;text-align:left;text-indent:45.6pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>a(i=6,j=1)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:22.35pt;
+mso-char-indent-count:1.96'><span style='font-family:宋体'>第七趟匹配：<span
+lang=EN-US> aabaabaabaac<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:33.5pt;
+mso-char-indent-count:2.94'><span lang=EN-US style='font-family:宋体'>(</span><span
+style='font-family:宋体'>成功<span lang=EN-US>)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>aabaac(i=13,j=7)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:135.0pt'><span lang=EN-US style='font-family:
+宋体'><span style='mso-spacerun:yes'>&nbsp; </span>15</span><span
+style='font-family:宋体'>．（<span lang=EN-US>1</span>）<span lang=EN-US>p</span>的<span
+lang=EN-US>nextval</span>函数值为<span lang=EN-US>0110132</span>。（<span lang=EN-US>p</span>的<span
+lang=EN-US>next</span>函数值为<span lang=EN-US>0111232</span>）。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>）利用<span lang=EN-US>KMP(</span>改进的<span
+lang=EN-US>nextval)</span>算法，每趟匹配过程如下：<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>第一趟匹配：<span lang=EN-US> abcaabbabcabaacbacba<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>abcab(i=5,j=5)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>第二趟匹配：<span lang=EN-US> abcaabbabcabaacbacba<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>abc(i=7,j=3)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>第三趟匹配：<span lang=EN-US> abcaabbabcabaacbacba<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>a(i=7,j=1)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
+style='font-family:宋体'>第四趟匹配：<span lang=EN-US> abcaabbabcabaac bacba<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span>(</span><span style='font-family:宋体'>成功<span lang=EN-US>)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span>abcabaa(i=15,j=8)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:135.0pt'><span lang=EN-US style='font-family:
+宋体'>16</span><span style='font-family:宋体'>．<span lang=EN-US>KMP</span>算法的时间复杂性是<span
+lang=EN-US>O</span>（<span lang=EN-US>m+n</span>）。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;tab-stops:135.0pt'><span
+lang=EN-US style='font-family:宋体'>p</span><span style='font-family:宋体'>的<span
+lang=EN-US>next</span>和<span lang=EN-US>nextval</span>值分别为<span lang=EN-US>01112212321</span>和<span
+lang=EN-US>01102201320</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:135.0pt'><span lang=EN-US style='font-family:
+宋体'>17</span><span style='font-family:宋体'>．（<span lang=EN-US>1</span>）<span
+lang=EN-US>p</span>的<span lang=EN-US>nextval</span>函数值为<span lang=EN-US>01010</span>。（<span
+lang=EN-US>next</span>函数值为<span lang=EN-US>01123</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;text-indent:-34.2pt;mso-char-indent-count:
+-3.0;tab-stops:135.0pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>）利用所得<span lang=EN-US>nextval</span>数值，手工模拟对<span
+lang=EN-US>s</span>的匹配过程，与上面<span lang=EN-US>16</span>题类似，为节省篇幅，故略去。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.2pt;text-indent:-34.2pt;mso-char-indent-count:
+-3.0;tab-stops:135.0pt'><span lang=EN-US style='font-family:宋体'>18</span><span
+style='font-family:宋体'>．模式串<span lang=EN-US>T</span>的<span lang=EN-US>next</span>和<span
+lang=EN-US>nextval</span>值分别为<span lang=EN-US>0121123</span>和<span lang=EN-US>0021002</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:135.0pt'><span lang=EN-US style='font-family:
+宋体'>19</span><span style='font-family:宋体'>．第<span lang=EN-US>4</span>行的<span
+lang=EN-US>p[J]=p[K]</span>语句是测试模式串的第<span lang=EN-US>J</span>个字符是否等于第<span
+lang=EN-US>K</span>个字符，如是，则指针<span lang=EN-US>J</span>和<span lang=EN-US>K</span>均增加<span
+lang=EN-US>1</span>，继续比较。第<span lang=EN-US>6</span>行的<span lang=EN-US>p[J]=p[K]</span>语句的意义是，当第<span
+lang=EN-US>J</span>个字符在模式匹配中失配时，若第<span lang=EN-US>K</span>个字符和第<span
+lang=EN-US>J</span>个字符不等，则下个与主串匹配的字符是第<span lang=EN-US>K</span>个字符；否则，若第<span
+lang=EN-US>K</span>个字符和第<span lang=EN-US>J</span>个字符相等，则下个与主串匹配的字符是第<span
+lang=EN-US>K</span>个字符失配时的下一个（即<span lang=EN-US>NEXTVAL[K]</span>）。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:135.0pt'><span lang=EN-US style='font-family:
+宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>该算法在最坏情况下的时间复杂度<span lang=EN-US>O</span>（<span
+lang=EN-US>m</span></span><sup><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体'>2</span></sup><span style='font-family:宋体'>）。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:135.0pt'><span lang=EN-US style='font-family:
+宋体'>20</span><span style='font-family:宋体'>．（<span lang=EN-US>1</span>）当模式串中第一个字符与主串中某字符比较不等（失配）时，<span
+lang=EN-US>next[1]=0</span>表示模式串中已没有字符可与主串中当前字符<span lang=EN-US>s[i]</span>比较，主串当前指针应后移至下一字符，再和模式串中第一字符进行比较。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:135.0pt'><span lang=EN-US style='font-family:
+宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>）当主串第<span lang=EN-US>i</span>个字符与模式串中第<span
+lang=EN-US>j</span>个字符失配时，若主串<span lang=EN-US>i</span>不回溯，则假定模式串第<span
+lang=EN-US>k</span>个字符与主串第<span lang=EN-US>i</span>个字符比较，<span lang=EN-US>k</span>值应满足条件<span
+lang=EN-US>1&lt;k&lt;j</span>并且‘<span lang=EN-US>p</span><sub>１</sub>…<span
+lang=EN-US>p<sub>k-1</sub></span>’<span lang=EN-US>=</span>‘<span lang=EN-US>p<sub>j-k+1</sub></span>…<span
+lang=EN-US>p<sub>j-1</sub></span>’，即<span lang=EN-US>k</span>为模式串向后移动的距离，<span
+lang=EN-US>k</span>值有多个，为了不使向右移动丢失可能的匹配，<span lang=EN-US>k</span>要取大，由于<span
+lang=EN-US>max{k}</span>表示移动的最大距离，所以取<span lang=EN-US>max{k}</span>，<span
+lang=EN-US>k</span>的最大值为<span lang=EN-US>j-1</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span style='font-family:
+宋体'>（<span lang=EN-US>3</span>）在上面两种情况外，发生失配时，主串指针<span lang=EN-US>i</span>不回溯，在最坏情况下，模式串从第<span
+lang=EN-US>1</span>个字符开始与主串第<span lang=EN-US>i</span>个字符比较，以便不致丢失可能的匹配。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>21</span><span
+style='font-family:宋体'>．这里失败函数<span lang=EN-US>f</span>，即是通常讲的模式串的<span
+lang=EN-US>next</span>函数，其定义见本章应用题的第<span lang=EN-US>6</span>题。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span style='font-family:宋体'>进行模式匹配时，若主串第<span
+lang=EN-US>i</span>个字符与模式串第<span lang=EN-US>j</span>个字符发生失配，主串指针<span
+lang=EN-US>i</span>不回溯，和主串第<span lang=EN-US>i</span>个字符进行比较的是模式串的第<span
+lang=EN-US>next[j]</span>个字符。模式串的<span lang=EN-US>next</span>函数值，只依赖于模式串，和主串无关，可以<span
+style='color:red'>预先</span>求出。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span style='font-family:宋体'>该算法的技术特点是主串指针<span
+lang=EN-US>i</span>不回溯。在经常发生“部分匹配”和主串很大不能一次调入内存时，优点特别突出。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>22</span><span
+style='font-family:宋体'>．失败函数（即<span lang=EN-US>next</span>）的值只取决于模式串自身，若第<span
+lang=EN-US>j</span>个字符与主串第<span lang=EN-US>i</span>个字符失配时，假定主串不回溯，模式串用第<span
+lang=EN-US>k</span>（即<span lang=EN-US>next[j]</span>）个字符与第<span lang=EN-US>i</span>个相比，有‘<span
+lang=EN-US> p<sub>1</sub></span>…<span lang=EN-US>p<sub>k-1</sub></span>’<span
+lang=EN-US>=</span>‘<span lang=EN-US>p<sub>j-k+1</sub></span>…<span lang=EN-US>p<sub>j-1</sub></span>’，为了不因模式串右移与主串第<span
+lang=EN-US>i</span>个字符比较而丢失可能的匹配，对于上式中存在的多个<span lang=EN-US>k</span>值，应取其中最大的一个。这样，因<span
+lang=EN-US>j-k</span>最小，即模式串向右滑动的位数最小，避免因右移造成的可能匹配的丢失。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>23</span><span
+style='font-family:宋体'>．仅从两串含有相等的字符，不能判定两串是否相等，两串相等的充分必要条件是两串长度相等且对应位置上的字符相同（即两串串值相等）。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>24</span><span
+style='font-family:宋体'>．（<span lang=EN-US>1</span>）<span lang=EN-US>s1</span>和<span
+lang=EN-US>s2</span>均为空串；（<span lang=EN-US>2</span>）两串之一为空串；（<span lang=EN-US>3</span>）两串串值相等（即两串长度相等且对应位置上的字符相同）。（<span
+lang=EN-US>4</span>）两串中一个串长是另一个串长（包括串长为<span lang=EN-US>1</span>仅有一个字符的情况）的数倍，而且长串就好象是由数个短串经过连接操作得到的。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>25</span><span
+style='font-family:宋体'>、题中所给操作的含义如下：<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US
+style='font-family:宋体'>//</span><span style='font-family:宋体'>：连接函数，将两个串连接成一个串<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US
+style='font-family:宋体'>substr</span><span style='font-family:宋体'>（<span
+lang=EN-US>s,i,j</span>）：取子串函数，从串<span lang=EN-US>s</span>的第<span lang=EN-US>i</span>个字符开始，取连续<span
+lang=EN-US>j</span>个字符形成子串<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US
+style='font-family:宋体'>replace</span><span style='font-family:宋体'>（<span
+lang=EN-US>s1,i,j,s2</span>）：置换函数，用<span lang=EN-US>s2</span>串替换<span
+lang=EN-US>s1</span>串中从第<span lang=EN-US>i</span>个字符开始的连续<span lang=EN-US>j</span>个字符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>本题有多种解法，下面是其中的一种：<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>（<span lang=EN-US>1</span>）<span lang=EN-US> s1=substr</span>（<span
+lang=EN-US>s,3,1</span>）<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>//</span>取出字符：‘<span
+lang=EN-US>y</span>’<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>（<span lang=EN-US>2</span>）<span lang=EN-US> s2=substr</span>（<span
+lang=EN-US>s,6,1</span>）<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>//</span>取出字符：‘<span
+lang=EN-US>+</span>’<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>（<span lang=EN-US>3</span>）<span lang=EN-US> s3=substr</span>（<span
+lang=EN-US>s,1,5</span>）<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>//</span>取出子串：‘<span
+lang=EN-US>(xyz)</span>’<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>（<span lang=EN-US>4</span>）<span lang=EN-US> s4=substr</span>（<span
+lang=EN-US>s,7,1</span>）<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>//</span>取出字符：‘<span
+lang=EN-US>*</span>’<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>（<span lang=EN-US>5</span>）<span lang=EN-US> s5=replace</span>（<span
+lang=EN-US>s3,<span style='color:red'>3</span>,1,s2</span>）<span lang=EN-US>//</span>形成部分串：‘（<span
+lang=EN-US>x+z</span>）’<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>（<span lang=EN-US>6</span>）<span lang=EN-US>
+s=s5//s4//s1<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span>形成串<span lang=EN-US>t</span>即‘（<span lang=EN-US>x+z</span>）<span
+lang=EN-US>*y</span>’<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>五、算法设计<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>1</span><span style='font-family:宋体'>、<span
+lang=EN-US>[</span>题目分析<span lang=EN-US>]</span>判断字符串<span lang=EN-US>t</span>是否是字符串<span
+lang=EN-US>s</span>的子串，称为串的模式匹配，其基本思想是对串<span lang=EN-US>s</span>和<span
+lang=EN-US>t</span>各设一个指针<span lang=EN-US>i</span>和<span lang=EN-US>j</span>，<span
+lang=EN-US>i</span>的值域是<span lang=EN-US>0..m-n</span>，<span lang=EN-US>j</span>的值域是<span
+lang=EN-US>0..n-1</span>。初始值<span lang=EN-US>i</span>和<span lang=EN-US>j</span>均为<span
+lang=EN-US>0</span>。模式匹配从<span lang=EN-US>s</span></span><sub><span lang=EN-US
+style='mso-bidi-font-size:10.5pt;font-family:宋体'>0</span></sub><span
+style='font-family:宋体'>和<span lang=EN-US>t</span></span><sub><span lang=EN-US
+style='mso-bidi-font-size:10.5pt;font-family:宋体'>0</span></sub><span
+style='font-family:宋体'>开始，若<span lang=EN-US>s</span></span><sub><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体'>0</span></sub><span
+lang=EN-US style='font-family:宋体'>=t</span><sub><span lang=EN-US
+style='mso-bidi-font-size:10.5pt;font-family:宋体'>0</span></sub><span
+style='font-family:宋体'>，则<span lang=EN-US>i</span>和<span lang=EN-US>j</span>指针增加<span
+lang=EN-US>1</span>，若在某个位置<span lang=EN-US>s</span></span><sub><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体'>i</span></sub><span
+lang=EN-US style='font-family:宋体'>!=t</span><sub><span lang=EN-US
+style='mso-bidi-font-size:10.5pt;font-family:宋体'>j</span></sub><span
+style='font-family:宋体'>，则主串指针<span lang=EN-US>i</span>回溯到<span lang=EN-US>i=i-j+1</span>，<span
+lang=EN-US>j</span>仍从<span lang=EN-US>0</span>开始，进行下一轮的比较，直到匹配成功（<span
+lang=EN-US>j&gt;n-1</span>），返回子串在主串的位置（<span lang=EN-US>i-j</span>）。否则，<span
+style='color:red'>当<span lang=EN-US>i&gt;m-n</span>则为匹配失败。<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>int
+</span></b><span lang=EN-US style='font-family:宋体'>index(<b style='mso-bidi-font-weight:
+normal'>char</b> s[],t[],<b style='mso-bidi-font-weight:normal'>int </b>m,n)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>//</span><span style='font-family:宋体'>字符串<span
+lang=EN-US>s</span>和<span lang=EN-US>t</span>用一维数组存储，其长度分别为<span lang=EN-US>m</span>和<span
+lang=EN-US>n</span>。本算法求字符串<span lang=EN-US>t</span>在字符串<span lang=EN-US>s</span>中的第一次出现，如是，输出子串在<span
+lang=EN-US>s</span>中的位置，否则输出<span lang=EN-US>0</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>int </b>i=0,j=0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>while</b> (i&lt;=m-n &amp;&amp; j&lt;=n-1)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span><b style='mso-bidi-font-weight:normal'>if</b> (s[i]==t[j]){i++;j++;}<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span><span style='font-family:宋体'>对应字符相等，指针后移。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>else</b> {i=i-j+1;j=0;}<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span
+style='font-family:宋体'>对应字符不相等，<span lang=EN-US>I</span>回溯，<span lang=EN-US>j</span>仍为<span
+lang=EN-US>0</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span><b style='mso-bidi-font-weight:normal'>if</b>(i&lt;=m-n &amp;&amp; j==n)
+{printf(“t</span><span style='font-family:宋体'>在<span lang=EN-US>s</span>串中位置是<span
+lang=EN-US>%d”,i-n+1);<b style='mso-bidi-font-weight:normal'>return</b>(i-n+1);}//</span>匹配成功<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:39.25pt;mso-char-indent-count:3.43;
+tab-stops:23.3pt'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-family:宋体'>else</span></b><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp; </span><b style='mso-bidi-font-weight:normal'>return</b>(0);
+//</span><span style='font-family:宋体'>匹配失败<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>算法<span
+lang=EN-US>index</span>结束<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>main ()//</span><span style='font-family:
+宋体'>主函数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>char</b>
+s[],t[]; <b style='mso-bidi-font-weight:normal'>int </b>m,n,i;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>scanf(“%d%d”,&amp;m,&amp;n);<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span><span style='font-family:宋体'>输入两字符串的长度<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>scanf(“%s”,s);<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span
+style='font-family:宋体'>输入主串<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>scanf(“%s”,t);<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span
+style='font-family:宋体'>输入子串<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>i=index(s,t,m,n);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>程序结束<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>[</span><span style='font-family:宋体'>程序讨论<span
+lang=EN-US>]</span>因用<span lang=EN-US>C</span>语言实现，一维数组的下标从<span lang=EN-US>0</span>开始，<span
+lang=EN-US>m-1</span>是<span style='color:red'>主</span>串最后一个字符的下标，<span
+lang=EN-US>n-1</span>是<span lang=EN-US>t</span>串的最后一个字符的下标。若匹配成功，最佳情况是<span
+lang=EN-US>s</span>串的第<span lang=EN-US>0</span>到第<span lang=EN-US>n-1</span>个字符与<span
+lang=EN-US>t</span>匹配，时间复杂度为<span lang=EN-US>o</span>（<span lang=EN-US>n</span>）；匹配成功的最差情况是，每次均在<span
+lang=EN-US>t</span>的最后一个字符才失败，直到<span lang=EN-US>s</span>串的第<span lang=EN-US>m-n</span>个字符成功，其时间复杂度为<span
+lang=EN-US>o</span>（（<span lang=EN-US>m-n</span>）<span lang=EN-US>*n</span>），即<span
+lang=EN-US>o</span>（<span lang=EN-US>m*n</span>）。失败的情况是<span lang=EN-US>s</span>串的第<span
+lang=EN-US>m-n</span>个字符比<span lang=EN-US>t</span>串某字符比较失败，时间复杂度为<span
+lang=EN-US>o</span>（<span lang=EN-US>m*n</span>）。之所以串<span lang=EN-US>s</span>的指针<span
+lang=EN-US>i</span>最大到<span lang=EN-US>m-n</span>，是因为在<span lang=EN-US>m-n</span>之后<span
+lang=EN-US>,</span>所剩子串长度已经小于子串长度<span lang=EN-US>n</span>，故不必再去比较。<span
+style='color:red'>算法中未讨论输入错误（如<span lang=EN-US>s</span>串长小于<span lang=EN-US>t</span>串长）。</span><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+style='font-family:宋体'>另外，根据子串的定义，返回值<span lang=EN-US>i-n+1</span>是子串在主串中的位置，子串在主串中的下标是<span
+lang=EN-US>i-n</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>2.</span><span style='font-family:宋体'>［问题分析］在一个字符串内，统计含多少整数的问题，核心是如何将数从字符串中分离出来。从左到右扫描字符串，初次碰到数字字符时，作为一个整数的开始。然后进行拼数，即将连续出现的数字字符拼成一个整数，直到碰到非数字字符为止，一个整数拼完，存入数组，再准备下一整数，如此下去，直至整个字符串扫描到结束。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>　<b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>int </span></b><span lang=EN-US>CountInt</span>（）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>// </span><span style='font-family:宋体'>从键盘输入字符串，连续的数字字符算作一个整数，统计其中整数的个数。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>｛<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>int </span></b><span
+lang=EN-US>i=0</span>，<span lang=EN-US>a[]</span>；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>整数存储到数组<span
+lang=EN-US>a</span>，<span lang=EN-US>i</span>记整数个数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<span
+lang=EN-US>scanf</span>（“％<span lang=EN-US>c</span>”，<span lang=EN-US>&amp;ch</span>）；<span
+lang=EN-US>// </span>从左到右读入字符串<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>while</span></b>（<span
+lang=EN-US>ch!=</span>‘<span lang=EN-US>#</span>’） <span lang=EN-US>//</span>‘<span
+lang=EN-US>#</span>’是字符串结束标记<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>if</span></b>（<span
+lang=EN-US>isdigit</span>（<span lang=EN-US>ch</span>））<span lang=EN-US>// </span>是数字字符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　｛<span
+lang=EN-US>num=</span>０；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>数初始化<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>while</span></b>（<span
+lang=EN-US>isdigit</span>（<span lang=EN-US>ch</span>）<span lang=EN-US>&amp;&amp;
+ch!=</span>‘<span lang=EN-US>#</span>’）<span lang=EN-US>// </span>拼数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　｛<span
+lang=EN-US>num=num</span>＊<span lang=EN-US>10+</span>‘<span lang=EN-US>ch</span>’<span
+lang=EN-US>-</span>‘０’；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　　<span
+lang=EN-US>scanf</span>（“％<span lang=EN-US>c</span>”，<span lang=EN-US>&amp;ch</span>）；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　 ｝<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　<span
+lang=EN-US>a[i]=num</span>；<span lang=EN-US>i++</span>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>if</span></b>（<span
+lang=EN-US>ch!=</span>‘<span lang=EN-US>#</span>’）<span lang=EN-US>scanf</span>（“<span
+lang=EN-US>%c</span>”，<span lang=EN-US>&amp;ch</span>）； <span lang=EN-US>// </span>若拼数中输入了‘<span
+lang=EN-US>#</span>’，则不再输入<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　 ｝<span
+lang=EN-US>// </span>结束<b style='mso-bidi-font-weight:normal'><span lang=EN-US>while</span></b>（<span
+lang=EN-US>ch</span>！＝‘<span lang=EN-US>#</span>’）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<span
+lang=EN-US>printf</span>（“共有<span lang=EN-US>%d</span>个整数，它们是：”<span
+lang=EN-US>i</span>）；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>for</span></b>（<span
+lang=EN-US>j=</span>０；<span lang=EN-US>j&lt;i</span>；<span lang=EN-US>j++</span>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:26.2pt;mso-char-indent-count:2.3'><span
+style='font-family:宋体'>　｛<span lang=EN-US>printf</span>（“<span lang=EN-US>%6d</span>”，<span
+lang=EN-US>a[j]</span>）；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　 　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>if</span></b>（（<span
+lang=EN-US>j+1</span>）％<span lang=EN-US>10==0</span>）<span lang=EN-US>printf</span>（“<span
+lang=EN-US>\n</span>”）；<span lang=EN-US>} // </span>每<span lang=EN-US>10</span>个数输出在一行上<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体'>｝<span lang=EN-US>// </span>算法结束<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+style='font-family:宋体'>［算法讨论］假定字符串中的数均不超过<span lang=EN-US>32767</span>，否则，需用长整型数组及变量。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>3</span><span style='font-family:宋体'>、<span
+lang=EN-US>[</span>题目分析<span lang=EN-US>]</span>设以字符数组<span lang=EN-US>s</span>表示串，重复子串的含义是由一个或多个连续相等的字符组成的子串，其长度用<span
+lang=EN-US>max</span>表示，初始长度为<span lang=EN-US>0</span>，将每个局部重复子串的长度与<span
+lang=EN-US>max</span>相比，若比<span lang=EN-US>max</span>大，则需要更新<span lang=EN-US>max</span>，并用<span
+lang=EN-US>index</span>记住其开始位置。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>int
+</span></b><span lang=EN-US style='font-family:宋体'>LongestString(<b
+style='mso-bidi-font-weight:normal'>char</b> s[],<b style='mso-bidi-font-weight:
+normal'>int </b>n)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>//</span><span style='font-family:宋体'>串用一维数组<span
+lang=EN-US>s</span>存储，长度为<span lang=EN-US>n</span>，本算法求最长重复子串，返回其长度。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>int </b>index=0,max=0;<span
+style='mso-spacerun:yes'>&nbsp; </span>//index</span><span style='font-family:
+宋体'>记最长的串在<span lang=EN-US>s</span>串中的开始位置，<span lang=EN-US>max</span>记其长度<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>int </b>length=1,i=0,<span
+style='color:red'>start=0;</span> <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span>//length</span><span
+style='font-family:宋体'>记局部重复子串长度，<span lang=EN-US>i</span>为字符数组下标<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>while</b>(i&lt;n-1)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span><b style='mso-bidi-font-weight:normal'>if</b>(s[i]==s[i+1]) {i++; length++;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span><b style='mso-bidi-font-weight:normal'>else</b> //</span><span
+style='font-family:宋体'>上一个重复子串结束<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<b
+style='mso-bidi-font-weight:normal'>if</b>(max&lt;length) {max=length; index=start;
+} //</span><span style='font-family:宋体'>当前重复子串长度大，则更新<span lang=EN-US>max<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i++;start=i;length=1;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span><span style='font-family:宋体'>初始化下一重复子串的起始位置和长度<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:33.5pt;mso-char-indent-count:2.94'><span lang=EN-US
+style='font-family:宋体'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:5.6pt;mso-char-indent-count:.49'><span lang=EN-US style='font-family:
+宋体'>printf(“</span><span style='font-family:宋体'>最长重复子串的长度为<span lang=EN-US>%d</span>，在串中的位置<span
+lang=EN-US>%d\n”</span>，<span lang=EN-US>max,index);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:5.6pt;mso-char-indent-count:.49'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>return</span></b><span
+lang=EN-US style='font-family:宋体'>(max);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>算法结束<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>[</span><span style='font-family:宋体'>算法讨论<span
+lang=EN-US>]</span>算法中用<span lang=EN-US>i&lt;n-1</span>来控制循环次数，因<span
+lang=EN-US>C</span>数组下标从<span lang=EN-US>0 </span>开始，故长度为<span lang=EN-US>n</span>的串，其最后一个字符下标是<span
+lang=EN-US>n-1</span>，当<span lang=EN-US>i</span>最大为<span lang=EN-US>n-2</span>时，条件语句中<span
+lang=EN-US>s[i+1]</span>正好是<span lang=EN-US>s[n-1]</span>，即最后一个字符。子串长度的初值数为<span
+lang=EN-US>1</span>，表示一个字符自然等于其身。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+style='font-family:宋体'>算法的时间复杂度为<span lang=EN-US>O(n</span>），每个字符与其后继比较一次。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>4</span><span style='font-family:宋体'>、<span
+lang=EN-US>[</span>题目分析<span lang=EN-US>]</span>教材中介绍的串置换有两种形式：第一种形式是<span
+lang=EN-US>replace</span>（<span lang=EN-US>s,i,j,t</span>），含义是将<span
+lang=EN-US>s</span>串中从第<span lang=EN-US>i</span>个字符开始的<span lang=EN-US>j</span>个字符用<span
+lang=EN-US>t</span>串替换<span lang=EN-US>,</span>第二种形式是<span lang=EN-US>replace(s,t,v)</span>，含义是将<span
+lang=EN-US>s</span>串中所有非重叠的<span lang=EN-US>t</span>串用<span lang=EN-US>v</span>代替。我们先讨论第一种形式的替换。因为已经给定顺序存储结构，我们可将<span
+lang=EN-US>s</span>串从第（<span lang=EN-US>i+j-1</span>）到串尾（即<span lang=EN-US>s.curlen</span>）移动<span
+lang=EN-US>t.curlen-j</span>绝对值个位置（以便将<span lang=EN-US>t</span>串插入）：若<span
+lang=EN-US>j&gt;t.curlen</span>，则向左移；若<span lang=EN-US>j&lt;t.curlen</span>，则向右移动；若<span
+lang=EN-US>j=t.curlen</span>，则不必移动。最后将<span lang=EN-US>t</span>串复制到<span
+lang=EN-US>s</span>串的合适位置上。当然，应考虑置换后的溢出问题。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+color:red'>int </span></b><span lang=EN-US style='font-family:宋体;color:red'>replace(strtp
+s,t,<b style='mso-bidi-font-weight:normal'>int </b>i,j)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体;color:red'>//s</span><span style='font-family:
+宋体;color:red'>和<span lang=EN-US>t</span>是用一维数组存储的串，本算法将<span lang=EN-US>s</span>串从第<span
+lang=EN-US>i</span>个字符开始的连续<span lang=EN-US>j</span>个字符用<span lang=EN-US>t</span>串置换，操作成功返回<span
+lang=EN-US>1</span>，否则返回<span lang=EN-US>0</span>表示失败。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体;color:red'>{<b style='mso-bidi-font-weight:
+normal'>if</b>(i&lt;1 || j&lt;0 || t.curlen+s.curlen-j&gt;maxlen)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体;color:red'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{printf(“</span><span
+style='font-family:宋体;color:red'>参数错误<span lang=EN-US>\n”);exit(0);}<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span>检查参数及置换后的长度的合法性。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:23.7pt;mso-para-margin-left:2.08gd;
+text-indent:.1pt;tab-stops:54.75pt'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:宋体;color:red'>if</span></b><span lang=EN-US
+style='font-family:宋体;color:red'>(j&lt;t.curlen) //</span><span
+style='font-family:宋体;color:red'>若<span lang=EN-US>s</span>串被替换的子串长度小于<span
+lang=EN-US>t</span>串长度，则<span lang=EN-US>s</span>串部分右移<span lang=EN-US>,<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:23.7pt;mso-para-margin-left:2.08gd;
+text-indent:17.1pt;mso-char-indent-count:1.5;tab-stops:54.75pt'><span
+lang=EN-US style='font-family:宋体;color:red'><span
+style='mso-spacerun:yes'>&nbsp;</span><b style='mso-bidi-font-weight:normal'>for</b>(k=s.curlen-1;k&gt;=i+j-1;k--)
+s.ch[k+t.curlen-j]=s.ch[k];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt;mso-char-indent-count:1.93;
+tab-stops:54.75pt'><span lang=EN-US style='font-family:宋体;color:red'><span
+style='mso-spacerun:yes'>&nbsp;</span><b style='mso-bidi-font-weight:normal'>else</b>
+<b style='mso-bidi-font-weight:normal'>if</b> (j&gt;t.curlen)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>//s</span><span
+style='font-family:宋体;color:red'>串中被替换子串的长度小于<span lang=EN-US>t</span>串的长度。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:23.7pt;mso-para-margin-left:2.08gd;
+text-indent:.1pt;tab-stops:54.75pt'><span lang=EN-US style='font-family:宋体;
+color:red'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>for</b>(k=i-1+j;k&lt;=s.curlen-1;k++) s.ch[k-(j-t.curlen)]=s.ch[k];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:23.7pt;mso-para-margin-left:2.08gd;
+text-indent:.1pt;tab-stops:54.75pt'><span lang=EN-US style='font-family:宋体;
+color:red'><span style='mso-spacerun:yes'>&nbsp;</span><b style='mso-bidi-font-weight:
+normal'>for</b>(k=0;k&lt;t.curlen;k++) s.ch[i-1+k]=t.ch[k];<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span><span style='font-family:宋体;
+color:red'>将<span lang=EN-US>t</span>串复制到<span lang=EN-US>s</span>串的适当位置<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+color:red'>if</span></b><span lang=EN-US style='font-family:宋体;color:red'>(j&gt;t.curlen)
+s.curlen=s.curlen-(j-t.curlen);<b style='mso-bidi-font-weight:normal'>else</b>
+s.curlen=s.curlen+(t.curlen-j);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:16.65pt;mso-char-indent-count:1.46'><span
+lang=EN-US style='font-family:宋体;color:red'>}//</span><span style='font-family:
+宋体;color:red'>算法结束<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体;color:red'>[</span><span style='font-family:
+宋体;color:red'>算法讨论<span lang=EN-US>]</span>若允许使用另一数组，在检查合法性后，可将<span
+lang=EN-US>s</span>的第<span lang=EN-US>i</span>个（不包括<span lang=EN-US>i</span>）之前的子串复制到另一子串如<span
+lang=EN-US>s1</span>中，再将<span lang=EN-US>t</span>串接到<span lang=EN-US>s1</span>串后面<span
+lang=EN-US>,</span>然后将<span lang=EN-US>s</span>的第<span lang=EN-US>i+j</span>直到尾的部分加到<span
+lang=EN-US>s1</span>之后。最后将<span lang=EN-US>s1</span>串复制到<span lang=EN-US>s</span>。主要语句有：<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+color:red'>for</span></b><span lang=EN-US style='font-family:宋体;color:red'>(k=0;k&lt;i;k++)
+s1.ch[k]=s.ch[k]; //</span><span style='font-family:宋体;color:red'>将<span
+lang=EN-US>s1</span>第<span lang=EN-US>i</span>个字符前的子串复制到<span lang=EN-US>s1</span>，这时<span
+lang=EN-US>k=i-1<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.9pt;mso-char-indent-count:2.0'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+color:red'>for</span></b><span lang=EN-US style='font-family:宋体;color:red'>(k=0;k&lt;t.curlen;k++)
+s1.ch[i+k]=t.ch[k]//</span><span style='font-family:宋体;color:red'>将<span
+lang=EN-US>t</span>串接到<span lang=EN-US>s1</span>的尾部<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:宋体;color:red'>l=s.curlen+t.curlen-j-1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+color:red'>for</span></b><span lang=EN-US style='font-family:宋体;color:red'>(k=s.curlen-1;k&gt;i-1+j;k--);//</span><span
+style='font-family:宋体;color:red'>将子串第<span lang=EN-US>i+j-1</span>个字符以后的子串复制到<span
+lang=EN-US>s1<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:22.35pt;mso-char-indent-count:1.96'><span lang=EN-US
+style='font-family:宋体;color:red'><span
+style='mso-spacerun:yes'>&nbsp;</span>s1.ch[l--]=s.ch[k]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+color:red'>for</span></b><span lang=EN-US style='font-family:宋体;color:red'>(k=0;k&lt;s.curlen+t.curlen-j;k++)
+s.ch[k]=s1.ch[k];//</span><span style='font-family:宋体;color:red'>将结果串放入<span
+lang=EN-US>s</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+style='font-family:宋体'>下面讨论<span lang=EN-US>replace</span>（<span lang=EN-US>s,t,v</span>）的算法。该操作的意义是用串<span
+lang=EN-US>v</span>替换所有在串<span lang=EN-US>s</span>中出现的和非空串<span lang=EN-US>t</span>相等的不重叠的子串。本算法不指定存储结构，只使用串的基本运算。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>void</span></b><span
+lang=EN-US style='font-family:宋体'> replace(string s,t,v)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>//</span><span style='font-family:宋体'>本算法是串的置换操作，将串<span
+lang=EN-US>s</span>中所有非空串<span lang=EN-US>t</span>相等且不重复的子串用<span lang=EN-US>v</span>代替。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{i=index(s,t);//</span><span
+style='font-family:宋体'>判断<span lang=EN-US>s</span>是否有和<span lang=EN-US>t</span>相等的子串<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>if</b>(i!=0)//</span><span
+style='font-family:宋体'>串<span lang=EN-US>s</span>中包含和<span lang=EN-US>t</span>相等的子串<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>{creat(temp,”);<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//creat</span><span style='font-family:宋体'>操作是将串常量（此处为空串）赋值给<span
+lang=EN-US>temp</span>。<span lang=EN-US><br>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span>m=length(t);n=length(s);<span style='mso-spacerun:yes'>&nbsp; </span>//</span>求串<span
+lang=EN-US>t</span>和<span lang=EN-US>s</span>的长度<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span><b style='mso-bidi-font-weight:normal'>while</b>(i!=0)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{assign(temp,concat(temp,substr(s,1,i-1),v));//</span><span
+style='font-family:宋体'>用串<span lang=EN-US>v</span>替换<span lang=EN-US>t</span>形成部分结果<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>assign(s,substr(s,i+m,n-i-m+1));<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span><span style='font-family:宋体'>将串<span lang=EN-US>s</span>中串后的部分形成新的<span
+lang=EN-US>s</span>串<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>n=n-(i-1)-m;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span><span style='font-family:宋体'>求串<span lang=EN-US>s</span>的长度<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i=index(s,t); <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>//</span><span
+style='font-family:宋体'>在新<span lang=EN-US>s</span>串中再找串<span lang=EN-US>t</span>的位置<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:34.2pt;mso-char-indent-count:3.0'><span lang=EN-US
+style='font-family:宋体'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:34.2pt;mso-char-indent-count:3.0'><span lang=EN-US
+style='font-family:宋体'>assign(s,contact(temp,s));<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span><span style='font-family:宋体'>将串<span
+lang=EN-US>temp</span>和剩余的串<span lang=EN-US>s</span>连接后再赋值给<span lang=EN-US>s<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:22.8pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='font-family:宋体'>}//<b style='mso-bidi-font-weight:normal'>if</b></span><span
+style='font-family:宋体'>结束<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>算法结束<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>5</span><span style='font-family:宋体'>、<span
+lang=EN-US>[</span>题目分析<span lang=EN-US>]</span>本题是字符串的插入问题，要求在字符串<span
+lang=EN-US>s</span>的<span lang=EN-US>pos</span>位置，插入字符串<span lang=EN-US>t</span>。首先应查找字符串<span
+lang=EN-US>s</span>的<span lang=EN-US>pos</span>位置，将第<span lang=EN-US>pos</span>个字符到字符串<span
+lang=EN-US>s</span>尾的子串向后移动字符串<span lang=EN-US>t</span>的长度，然后将字符串<span
+lang=EN-US>t</span>复制到字符串<span lang=EN-US>s</span>的第<span lang=EN-US>pos</span>位置后。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-family:宋体'>对插入位置<span
+lang=EN-US>pos</span>要验证其合法性，小于<span lang=EN-US>1</span>或大于串<span lang=EN-US>s</span>的长度均为非法，因题目假设给字符串<span
+lang=EN-US>s</span>的空间足够大，故对插入不必判溢出。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>void</span></b><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;
+</span>insert(<b style='mso-bidi-font-weight:normal'>char</b> *s,<b
+style='mso-bidi-font-weight:normal'>char</b> *t,<b style='mso-bidi-font-weight:
+normal'>int </b>pos)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:11.15pt;mso-char-indent-count:.98'><span lang=EN-US
+style='font-family:宋体'>//</span><span style='font-family:宋体'>将字符串<span
+lang=EN-US>t</span>插入字符串<span lang=EN-US>s</span>的第<span lang=EN-US>pos</span>个位置。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>int </b>i=1,x=0;<span
+style='mso-spacerun:yes'>&nbsp; </span><b style='mso-bidi-font-weight:normal'>char</b>
+*p=s,*q=t;<span style='mso-spacerun:yes'>&nbsp; </span>//p</span><span
+style='font-family:宋体'>，<span lang=EN-US>q</span>分别为字符串<span lang=EN-US>s</span>和<span
+lang=EN-US>t</span>的工作指针<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>if</b>(pos&lt;1) {printf(“pos</span><span
+style='font-family:宋体'>参数位置非法<span lang=EN-US>\n”);exit(0);}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:5.6pt;mso-char-indent-count:.49'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>while</span></b><span
+lang=EN-US style='font-family:宋体'>(*p!=’\0’&amp;&amp;i&lt;pos) {p++;i++;} //</span><span
+style='font-family:宋体'>查<span lang=EN-US>pos</span>位置<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>若<span
+lang=EN-US>pos</span>小于串<span lang=EN-US>s</span>长度，则查到<span lang=EN-US>pos</span>位置时，<span
+lang=EN-US>i=pos</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>if</b>(*p == '/0') {printf(&quot;%d</span><span
+style='font-family:宋体'>位置大于字符串<span lang=EN-US>s</span>的长度<span lang=EN-US>&quot;,pos);exit(0);}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>else</b><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span
+style='font-family:宋体'>查找字符串的尾<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp; </span><b style='mso-bidi-font-weight:normal'>while</b>(*p!=
+'/0') {p++; i++;}<span style='mso-spacerun:yes'>&nbsp; </span>//</span><span
+style='font-family:宋体'>查到尾时，<span lang=EN-US>i</span>为字符‘<span lang=EN-US>\0</span>’的下标，<span
+lang=EN-US>p</span>也指向‘<span lang=EN-US>\0</span>’。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>while</b>(*q!= '\0') {q++; x++; }<span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>查找字符串<span
+lang=EN-US>t</span>的长度<span lang=EN-US>x</span>，循环结束时<span lang=EN-US>q</span>指向<span
+lang=EN-US>'\0'</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>for</b>(j=i;j&gt;=pos ;j--){*(<span
+style='color:red'>p+x)</span>=*p; p--;}//</span><span style='font-family:宋体'>串<span
+lang=EN-US>s</span>的<span lang=EN-US>pos</span>后的子串右移，空出串<span lang=EN-US>t</span>的位置。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span>q--;<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span><span style='font-family:宋体'>指针<span
+lang=EN-US>q</span>回退到串<span lang=EN-US>t</span>的最后一个字符<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>for</b>(j=1;j&lt;=x;j++) *p--=*q--;<span
+style='mso-spacerun:yes'>&nbsp; </span>//</span><span style='font-family:宋体'>将<span
+lang=EN-US>t</span>串插入到<span lang=EN-US>s</span>的<span lang=EN-US>pos</span>位置上<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:16.75pt;mso-char-indent-count:1.47'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span>[</span><span
+style='font-family:宋体'>算法讨论<span lang=EN-US>] </span>串<span lang=EN-US>s</span>的结束标记<span
+lang=EN-US>('\0')</span>也后移了，而串<span lang=EN-US>t</span>的结尾标记不应插入到<span
+lang=EN-US>s</span>中。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>6.[</span><span style='font-family:宋体'>题目分析<span
+lang=EN-US>]</span>本题属于查找，待查找元素是字符串（长<span lang=EN-US>4</span>），将查找元素存放在一维数组中。二分检索（即折半查找或对分查找），是首先用一维数组的“中间”元素与被检索元素比较，若相等<span
+lang=EN-US>,</span>则检索成功，否则，根据被检索元素大于或小于中间元素，而在中间元素的右方或左方继续查找，直到检索成功或失败（被检索区间的低端指针大于高端指针）。下面给出类<span
+lang=EN-US>C</span>语言的解法<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>typedef</span></b><span
+lang=EN-US style='font-family:宋体'> <b style='mso-bidi-font-weight:normal'>struct</b>
+node<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>char</b>
+data[4];//</span><span style='font-family:宋体'>字符串长<span lang=EN-US>4<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}node;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+style='font-family:宋体'>非递归过程如下：<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>int
+</span></b><span lang=EN-US style='font-family:宋体'>binsearch(node string [];<b
+style='mso-bidi-font-weight:normal'>int </b>n;<b style='mso-bidi-font-weight:
+normal'>char</b> name[4])<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>//</span><span style='font-family:宋体'>在有<span
+lang=EN-US>n</span>个字符串的数组<span lang=EN-US>string</span>中，二分检索字符串<span
+lang=EN-US>name</span>。若检索成功，返回<span lang=EN-US>name</span>在<span lang=EN-US>string</span>中的下标，否则返回<span
+lang=EN-US style='color:red'>-1</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>int </b>low
+= 0,high = n - 1;//low</span><span style='font-family:宋体'>和<span lang=EN-US>high</span>分别是检索区间的下界和上界<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:28.05pt;mso-char-indent-count:2.45'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>while</span></b><span
+lang=EN-US style='font-family:宋体'>(low &lt;= high)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:33.5pt;mso-char-indent-count:2.94'><span
+lang=EN-US style='font-family:宋体'>{mid = (low + high) /2; //</span><span
+style='font-family:宋体'>取中间位置<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:33.4pt;mso-char-indent-count:2.93'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>if</b>(strcmp(string[mid],name) ==0) <b
+style='mso-bidi-font-weight:normal'>return</b> (mid); //</span><span
+style='font-family:宋体'>检索成功<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:33.5pt;mso-char-indent-count:2.94'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>else</b> <b style='mso-bidi-font-weight:
+normal'>if</b>(strcmp(string[mid],name)&lt;0) low=mid+1; //</span><span
+style='font-family:宋体'>到右半部分检索<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:67.15pt;mso-char-indent-count:5.87'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>else</span></b><span
+lang=EN-US style='font-family:宋体'> high=mid-1;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span><span style='font-family:宋体'>到左半部分检索<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:33.5pt;mso-char-indent-count:2.94'><span
+lang=EN-US style='font-family:宋体'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:28.05pt;mso-char-indent-count:2.45'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>return</span></b><span
+lang=EN-US style='font-family:宋体'> 0; //</span><span style='font-family:宋体'>检索失败<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>算法结束<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+style='font-family:宋体'>最大检索长度为<span lang=EN-US>log<sub>2</sub>n</span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>7. [</span><span style='font-family:宋体'>题目分析<span
+lang=EN-US>]</span>设字符串存于字符数组<span lang=EN-US>X</span>中，若转换后的数是负数，字符串的第一个字符必为<span
+lang=EN-US> '-'</span>，取出的数字字符，通过减去字符零（<span lang=EN-US>'0'</span>）的<span
+lang=EN-US>ASCII</span>值，变成数，先前取出的数乘上<span lang=EN-US>10</span>加上本次转换的数形成部分数，直到字符串结束，得到结果。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>long atoi(<b style='mso-bidi-font-weight:
+normal'>char</b> X[])<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>一数字字符串存于字符数组<span
+lang=EN-US>X</span>中，本算法将其转换成数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:11.4pt;mso-char-indent-count:1.0'><span lang=EN-US
+style='font-family:宋体'>{long num=0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:16.8pt;mso-char-indent-count:1.47'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>int </span></b><span
+lang=EN-US style='font-family:宋体'>i=1; //i </span><span style='font-family:
+宋体'>为数组下标<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:39.25pt;mso-char-indent-count:3.43'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>while</span></b><span
+lang=EN-US style='font-family:宋体'> (X[i]!= '\0') num=10*num+(X[i++]-'0');//</span><span
+style='font-family:宋体'>当字符串未到尾，进行数的转换<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:16.8pt;mso-char-indent-count:1.47'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>if</span></b><span lang=EN-US
+style='font-family:宋体'>(X[0]=='-') <b style='mso-bidi-font-weight:normal'>return</b>
+(-num);<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span
+style='font-family:宋体'>返回负数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:16.8pt;mso-char-indent-count:1.47'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>else</span></b><span
+lang=EN-US style='font-family:宋体'> <b style='mso-bidi-font-weight:normal'>return</b>
+((X[0]-'0')*10+num); //</span><span style='font-family:宋体'>返回正数，第一位若不是负号，则是数字<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>算法<span
+lang=EN-US>atoi</span>结束<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:16.75pt;mso-char-indent-count:1.47'><span
+lang=EN-US style='font-family:宋体'>[</span><span style='font-family:宋体'>算法讨论<span
+lang=EN-US>]</span>如是负数，其符号位必在前面，即字符数组的<span lang=EN-US>x[0]</span>，所以在作转换成数时下标<span
+lang=EN-US>i</span>从<span lang=EN-US>1 </span>开始，数字字符转换成数使用<span lang=EN-US>X[i]-'0',</span>即字符与<span
+lang=EN-US>'0'</span>的<span lang=EN-US>ASCII</span>值相减。请注意对返回正整数的处理。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>8.[</span><span style='font-family:宋体'>题目分析<span
+lang=EN-US>]</span>本题要求字符串<span lang=EN-US>s1</span>拆分成字符串<span lang=EN-US>s2</span>和字符串<span
+lang=EN-US>s3</span>，要求字符串<span lang=EN-US>s2</span>“按给定长度<span lang=EN-US>n</span>格式化成两端对齐的字符串”，即长度为<span
+lang=EN-US>n</span>且首尾字符不得为空格字符。算法从左到右扫描字符串<span lang=EN-US>s1</span>，找到第一个非空格字符，计数到<span
+lang=EN-US>n</span>，第<span lang=EN-US>n</span>个拷入字符串<span lang=EN-US>s2</span>的字符不得为空格，然后将余下字符复制到字符串<span
+lang=EN-US>s3</span>中。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:16.8pt;mso-char-indent-count:1.47'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>void</span></b><span
+lang=EN-US style='font-family:宋体'> format (<b style='mso-bidi-font-weight:normal'>char</b>
+*s1,*s2,*s3)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>//</span><span style='font-family:宋体'>将字符串<span
+lang=EN-US>s1</span>拆分成字符串<span lang=EN-US>s2</span>和字符串<span lang=EN-US>s3</span>，要求字符串<span
+lang=EN-US>s2</span>是长<span lang=EN-US>n</span>且两端对齐<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:16.75pt;mso-char-indent-count:1.47'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>char</b>
+*p=s1, *q=s2;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>int </b>i=0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>while</b>(*p!= '\0' &amp;&amp; *p== ' ') p++;//</span><span
+style='font-family:宋体'>滤掉<span lang=EN-US>s1</span>左端空格<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>if</b>(*p== '\0') {printf(&quot;</span><span style='font-family:宋体'>字符串<span
+lang=EN-US>s1</span>为空串或空格串<span lang=EN-US>\n&quot;);exit(0);<span
+style='mso-tab-count:1'> </span>}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>while</b>( *p!='\0' &amp;&amp; i&lt;n){*q=*p; q++; p++; i++;}//</span><span
+style='font-family:宋体'>字符串<span lang=EN-US>s1</span>向字符串<span lang=EN-US>s2</span>中复制<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>if</b>(*p =='\0'){ printf(&quot;</span><span style='font-family:宋体'>字符串<span
+lang=EN-US>s1</span>没有<span lang=EN-US>%d</span>个有效字符<span lang=EN-US>\n&quot;,n);
+exit(0);}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>if</b>(*(--q)==' ' ) //</span><span style='font-family:宋体'>若最后一个字符为空格，则需向后找到第一个非空格字符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>{p-- ; <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>//p</span><span
+style='font-family:宋体'>指针也后退<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><b style='mso-bidi-font-weight:normal'>while</b>(*p=='
+'&amp;&amp;<span style='color:red'>*p</span>!='\0') p++;//</span><span
+style='font-family:宋体'>往后查找一个非空格字符作串<span lang=EN-US>s2</span>的尾字符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:34.95pt'><span lang=EN-US style='font-family:
+宋体'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><b style='mso-bidi-font-weight:normal'>if</b>(*p=='\0')
+{printf(&quot;s1</span><span style='font-family:宋体'>串没有<span lang=EN-US>%d</span>个两端对齐的字符串<span
+lang=EN-US>\n&quot;,n); exit(0);<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>*q=*p; <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>字符串<span
+lang=EN-US>s2</span>最后一个非空字符<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>*(++q)='\0';<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>//</span><span style='font-family:
+宋体'>置<span lang=EN-US>s2</span>字符串结束标记<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>*q=s3;p++; <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>将<span
+lang=EN-US>s1</span>串其余部分送字符串<span lang=EN-US>s3</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>while</b> (*p!= '\0') {*q=*p; q++; p++;}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>*q='\0';<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>置串<span
+lang=EN-US>s3</span>结束标记<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:16.75pt;mso-char-indent-count:1.47'><span
+lang=EN-US style='font-family:宋体'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>9.[</span><span style='font-family:宋体'>题目分析<span
+lang=EN-US>]</span>两个串的相等，其定义为两个串的值相等，即串长相等，且对应字符相等是两个串相等的充分必要条件。因此，首先比较串长，在串长相等的前提下，再比较对应字符是否相等。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>int
+</span></b><span lang=EN-US style='font-family:宋体'>equal(strtp s,strtp t)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>//</span><span style='font-family:宋体'>本算法判断字符串<span
+lang=EN-US>s</span>和字符串<span lang=EN-US>t</span>是否相等，如相等返回<span lang=EN-US>1</span>，否则返回<span
+lang=EN-US>0<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>if</b>
+(s.curlen!=t.curlen) <b style='mso-bidi-font-weight:normal'>return</b> (0);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>for</span></b><span
+lang=EN-US style='font-family:宋体'> (i=0; i&lt;s.curlen;i++) <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span>//</span><span
+style='font-family:宋体'>在类<span lang=EN-US>C</span>中，一维数组下标从零开始<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:16.7pt;mso-char-indent-count:1.46'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>if</span></b><span lang=EN-US
+style='font-family:宋体'> (s.ch[i]!= t.ch[i])<b style='mso-bidi-font-weight:normal'>return</b>
+(0);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>return</span></b><span
+lang=EN-US style='font-family:宋体'> (1);<span style='mso-spacerun:yes'>&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;</span>//</span><span
+style='font-family:宋体'>两串相等<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>算法结束<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>10.</span><span style='font-family:宋体'>［问题分析］由于字母共<span
+lang=EN-US>26</span>个，加上数字符号<span lang=EN-US>10</span>个共<span lang=EN-US>36</span>个，所以设一长<span
+lang=EN-US>36</span>的整型数组，前<span lang=EN-US>10</span>个分量存放数字字符出现的次数，余下存放字母出现的次数。从字符串中读出数字字符时，字符的<span
+lang=EN-US>ASCII</span>代码值减去数字字符 ‘<span lang=EN-US>0’</span>的<span lang=EN-US>ASCII</span>代码值，得出其数值<span
+lang=EN-US>(0..9)</span>，字母的<span lang=EN-US>ASCII</span>代码值减去字符‘<span
+lang=EN-US>A</span>’的<span lang=EN-US>ASCII</span>代码值加上<span lang=EN-US>10</span>，存入其数组的对应下标分量中。遇其它符号不作处理，直至输入字符串结束。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>void</span></b><span
+lang=EN-US style='font-family:宋体'> Count</span><span style='font-family:宋体'>（）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>//</span><span style='font-family:宋体'>统计输入字符串中数字字符和字母字符的个数。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>｛<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>int </span></b><span
+lang=EN-US>i</span>，<span lang=EN-US>num[36]</span>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:33.65pt;mso-char-indent-count:2.94'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>char</span></b><span
+lang=EN-US style='font-family:宋体'> ch</span><span style='font-family:宋体'>；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>for</span></b>（<span
+lang=EN-US>i</span>＝<span lang=EN-US>0</span>；<span lang=EN-US>i&lt;36</span>；<span
+lang=EN-US>i++</span>）<span lang=EN-US>num[i]</span>＝０；<span lang=EN-US>// </span>初始化<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>while</span></b>（（<span
+lang=EN-US>ch</span>＝<span lang=EN-US>getchar</span>（））<span lang=EN-US>!=</span>‘<span
+lang=EN-US>#</span>’）<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;
+</span>//</span>‘<span lang=EN-US>#</span>’表示输入字符串结束。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>if</span></b>（‘<span
+lang=EN-US>0</span>’<span lang=EN-US>&lt;=ch&lt;=</span>‘<span lang=EN-US>9</span>’）｛<span
+lang=EN-US>i=ch</span>－<span lang=EN-US>48;num[i]++</span>；｝<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>数字字符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>else</b></span>　<b style='mso-bidi-font-weight:normal'><span
+lang=EN-US>if</span></b>（‘<span lang=EN-US>A</span>’<span lang=EN-US>&lt;=ch&lt;=</span>‘<span
+lang=EN-US>Z</span>’）｛<span lang=EN-US>i=ch-65+10;num[i]++</span>；｝<span
+lang=EN-US>// </span>字母字符<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>for</span></b>（<span
+lang=EN-US>i=0</span>；<span lang=EN-US>i&lt;10</span>；<span lang=EN-US>i++</span>）<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span>// </span>输出数字字符的个数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　　<span
+lang=EN-US>printf</span>（“数字％<span lang=EN-US>d</span>的个数＝％<span lang=EN-US>d\n</span>”，<span
+lang=EN-US>i</span>，<span lang=EN-US>num[i]</span>）；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>for</span></b>（<span
+lang=EN-US>i</span>＝<span lang=EN-US>10</span>；<span lang=EN-US>i&lt;36</span>；<span
+lang=EN-US>i++</span>）<span lang=EN-US>// </span>求出字母字符的个数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>　　　　<span
+lang=EN-US>printf</span>（“字母字符％<span lang=EN-US>c</span>的个数＝％<span lang=EN-US>d\n</span>”，<span
+lang=EN-US>i</span>＋<span lang=EN-US>55</span>，<span lang=EN-US>num[i]</span>）；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>｝<span
+lang=EN-US>// </span>算法结束。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96;
+tab-stops:23.3pt'><span lang=EN-US style='font-family:宋体'>11.[</span><span
+style='font-family:宋体'>题目分析<span lang=EN-US>]</span>实现字符串的逆置并不难，但本题“要求不另设串存储空间”来实现字符串逆序存储，即第一个输入的字符最后存储，最后输入的字符先存储，使用递归可容易做到。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96;
+tab-stops:23.3pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span><b style='mso-bidi-font-weight:normal'>void</b>
+InvertStore(<b style='mso-bidi-font-weight:normal'>char</b> A[])<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>//</span><span style='font-family:宋体'>字符串逆序存储的递归算法。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>{ <b style='mso-bidi-font-weight:normal'>char</b>
+ch;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:11.4pt;mso-char-indent-count:1.0'><span lang=EN-US
+style='font-family:宋体'>static <b style='mso-bidi-font-weight:normal'>int </b>i
+= 0;//</span><span style='font-family:宋体'>需要使用静态变量<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:11.4pt;mso-char-indent-count:1.0'><span lang=EN-US
+style='font-family:宋体'>scanf (&quot;%c&quot;,&amp;ch);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:11.45pt;mso-char-indent-count:1.0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>if</span></b><span lang=EN-US
+style='font-family:宋体'> (ch!= '.')<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>//</span><span
+style='font-family:宋体'>规定<span lang=EN-US>'.'</span>是字符串输入结束标志<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>{InvertStore(A);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>A[i++] = ch;//</span><span
+style='font-family:宋体'>字符串逆序存储<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:11.4pt;mso-char-indent-count:1.0'><span lang=EN-US
+style='font-family:宋体'>A[i] = '\0';<span style='mso-spacerun:yes'>&nbsp;
+</span>//</span><span style='font-family:宋体'>字符串结尾标记<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>结束算法<span
+lang=EN-US>InvertStore</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>12. </span><span style='font-family:宋体'>串<span
+lang=EN-US>s'''</span>可以看作由以下两部分组成：<span lang=EN-US>'caabcbca...a'</span>和<span
+lang=EN-US> 'ca...a'</span>，设这两部分分别叫串<span lang=EN-US>s1</span>和串<span
+lang=EN-US>s2</span>，要设法从<span lang=EN-US>s,s' </span>和<span lang=EN-US>s''</span>中得到这两部分，然后使用联接操作联接<span
+lang=EN-US>s1</span>和<span lang=EN-US>s2</span>得到<span lang=EN-US>s''' </span>。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>i=index(s,s');<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>//</span><span style='font-family:
+宋体'>利用串<span lang=EN-US>s'</span>求串<span lang=EN-US>s1</span>在串<span
+lang=EN-US>s</span>中的起始位置<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>s1=substr(s,i,length(s) - i + 1); //</span><span
+style='font-family:宋体'>取出串<span lang=EN-US>s1<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>j=index(s,s''); //</span><span
+style='font-family:宋体'>求串<span lang=EN-US>s''</span>在串<span lang=EN-US>s</span>中的起始位置，<span
+lang=EN-US>s</span>串中<span lang=EN-US>'bcb'</span>后是<span lang=EN-US>'ca...a')<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>s2=substr(s,j+<span style='color:red'>3</span>,length(s)
+- j - <span style='color:red'>2</span>); //</span><span style='font-family:
+宋体'>形成串<span lang=EN-US>s2<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'>s3=concat(s1,s2);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:宋体'>13</span><span style='font-family:宋体'>．<span
+lang=EN-US>[</span>题目分析<span lang=EN-US>]</span>对读入的字符串的第奇数个字符，直接放在数组前面，对第偶数个字符，先入栈，到读字符串结束，再将栈中字符出栈，送入数组中。限于篇幅，这里编写算法，未编程序。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>void</span></b><span
+lang=EN-US style='font-family:宋体'> RearrangeString()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:22.5pt'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span>//</span><span
+style='font-family:宋体'>对字符串改造，将第偶数个字符放在串的后半部分，第奇数个字符前半部分。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.5pt'><span lang=EN-US
+style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>char</b> ch,s[],stk[];<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>//s</span><span
+style='font-family:宋体'>和<span lang=EN-US>stk</span>是字符数组（表示字符串）和字符栈<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.5pt'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>int </b>i=1,j;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>//i</span><span
+style='font-family:宋体'>和<span lang=EN-US>j</span>字符串和字符栈指针<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.5pt'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>while</b>((ch=getchar())!=’#’)// ’#’</span><span
+style='font-family:宋体'>是字符串结束标志<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:39.45pt;mso-char-indent-count:3.46'><span
+lang=EN-US style='font-family:宋体'>s[i++]=ch;<span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>读入字符串<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>s[i]=’\0’;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>//</span><span
+style='font-family:宋体'>字符数组中字符串结束标志<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>i=1;j=1;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>while</b>(s[i])<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span><span style='font-family:宋体'>改造字符串<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<b
+style='mso-bidi-font-weight:normal'>if</b>(i%2<span style='color:red'>==</span>0)
+stk[i/2]=s[i]; <b style='mso-bidi-font-weight:normal'>else</b> s[j++]=s[i];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i++;<span style='mso-spacerun:yes'>&nbsp; </span>}//<b style='mso-bidi-font-weight:
+normal'>while</b><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span style='color:red'><span
+style='mso-spacerun:yes'>&nbsp;</span>i--; </span>i=i/2;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//i</span><span style='font-family:宋体'>先从<span lang=EN-US>’\0’</span>后退，是第偶数字符的个数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>while</b>(i&gt;0) s[j++]=stk[i--]<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>//</span><span style='font-family:
+宋体'>将第偶数个字符逆序填入原字符数组<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.5pt'><span lang=EN-US
+style='font-family:宋体'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:22.35pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-family:宋体'>14.[</span><span style='font-family:宋体'>题目分析<span
+lang=EN-US>]</span>本题是对字符串表达式的处理问题，首先定义<span lang=EN-US>4</span>种数据结构：符号的类码，符号的<span
+lang=EN-US>TOKEN </span>表示，变量名表<span lang=EN-US>NAMEL</span>和常量表<span
+lang=EN-US>CONSL</span>。这四种数据结构均定义成结构体形式，数据部分用一维数组存储，同时用指针指出数据的个数。算法思想是从左到右扫描表达式，对读出的字符，先查出其符号类码：若是变量或常量，就到变量名表和常量表中去查是否已有，若无，则在相应表中增加之，并返回该字符在变量名表或常量表中的下标；若是操作符，则去查其符号类码。对读出的每个符号，均填写其<span
+lang=EN-US>TOKEN</span>表。如此下去，直到表达式处理完毕。先定义各数据结构如下。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>struct</span></b><span
+lang=EN-US style='font-family:宋体'> // </span><span style='font-family:宋体'>定义符号类别数据结构<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span>{<b style='mso-bidi-font-weight:normal'>char</b><span
+style='mso-spacerun:yes'>&nbsp; </span>data[7];<span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>符号<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.75pt'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-family:宋体'>char</span></b><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp; </span>code[7]</span><span style='font-family:
+宋体'>；<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span>//</span>符号类码<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:39.9pt;mso-char-indent-count:3.5'><span
+lang=EN-US style='font-family:宋体'>}TYPL</span><span style='font-family:宋体'>；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>typedef</span></b><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>struct</b><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span
+style='font-family:宋体'>定义<span lang=EN-US>TOKEN</span>的元素<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span>{<b style='mso-bidi-font-weight:normal'>int </b>typ</span><span
+style='font-family:宋体'>； <span style='mso-spacerun:yes'>&nbsp;</span><span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>//</span>符号码<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.75pt'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-family:宋体'>int </span></b><span lang=EN-US style='font-family:宋体'>addr</span><span
+style='font-family:宋体'>；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span>变量、常量在名字表中的地址<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.75pt'><span lang=EN-US style='font-family:宋体'>}cmp</span><span
+style='font-family:宋体'>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>struct</span></b><span
+lang=EN-US style='font-family:宋体'> {cmp data[50]</span><span style='font-family:
+宋体'>；<span lang=EN-US>//</span>定义<span lang=EN-US>TOKEN</span>表长度<span
+lang=EN-US>&lt;50<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>int </b>last</span><span style='font-family:
+宋体'>；<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span>表达式元素个数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:33.5pt;mso-char-indent-count:2.94'><span lang=EN-US
+style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span>}TOKEN</span><span
+style='font-family:宋体'>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>struct</span></b><span
+lang=EN-US style='font-family:宋体'> {<b style='mso-bidi-font-weight:normal'>char</b>
+data[15]</span><span style='font-family:宋体'>；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>//</span>设变量个数小于<span lang=EN-US>15</span>个<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>int </b>last</span><span style='font-family:
+宋体'>；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span>名字表变量个数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}NAMEL</span><span
+style='font-family:宋体'>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>struct</span></b><span
+lang=EN-US style='font-family:宋体'> {<b style='mso-bidi-font-weight:normal'>char</b>
+data[15]</span><span style='font-family:宋体'>；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>//</span>设常量个数小于<span lang=EN-US>15</span>个<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>int </b><span
+style='mso-spacerun:yes'>&nbsp;</span>last</span><span style='font-family:宋体'>；<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span>常量个数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}CONSL</span><span
+style='font-family:宋体'>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>int
+</span></b><span lang=EN-US style='font-family:宋体'>operator</span><span
+style='font-family:宋体'>（<b style='mso-bidi-font-weight:normal'><span
+lang=EN-US>char</span></b><span lang=EN-US> cr</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>查符号在类码表中的序号<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;</span>{<b
+style='mso-bidi-font-weight:normal'>for</b></span><span style='font-family:
+宋体'>（<span lang=EN-US>i=3</span>；<span lang=EN-US>i&lt;=6</span>；<span
+lang=EN-US>i++</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>if</b></span><span style='font-family:宋体'>（<span
+lang=EN-US>TYPL.data[i]==cr</span>） <b style='mso-bidi-font-weight:normal'><span
+lang=EN-US>return</span></b>（<span lang=EN-US>i</span>）；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:5.7pt;mso-char-indent-count:.5'><span lang=EN-US style='font-family:
+宋体'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>void</span></b><span
+lang=EN-US style='font-family:宋体'> PROCeString</span><span style='font-family:
+宋体'>（）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span><span style='font-family:宋体'>从键盘读入字符串表达式（以‘<span
+lang=EN-US>#</span>’结束），输出其<span lang=EN-US>TOKEN</span>表示。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;</span>{NAMEL.last=CONSL.last=TOKEN.last=0</span><span
+style='font-family:宋体'>；<span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;
+</span>//</span>各表元素个数初始化为<span lang=EN-US>0<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;
+</span>TYPL.data[3]=</span><span style='font-family:宋体'>‘<span lang=EN-US>*</span>’；<span
+lang=EN-US>TYPL.data[4]=</span>‘<span lang=EN-US>+</span>’；<span lang=EN-US>TYPL.data[5]=</span>‘（’；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;
+</span>TYPL.data[6]=</span><span style='font-family:宋体'>‘）’；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>//</span>将操作符存入数组<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:11.15pt;mso-char-indent-count:.98'><span lang=EN-US
+style='font-family:宋体'>TYPL.code[3]=</span><span style='font-family:宋体'>‘<span
+lang=EN-US>3</span>’；<span lang=EN-US>TYPL.code[4]=</span>‘<span lang=EN-US>4</span>’；<span
+lang=EN-US>TYPL.code[5]=</span>‘<span lang=EN-US>5</span>’；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;
+</span>TYPL.code[6]=</span><span style='font-family:宋体'>‘<span lang=EN-US>6</span>’；
+<span lang=EN-US>//</span>将符号的类码存入数组<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp;
+</span>scanf</span><span style='font-family:宋体'>（“<span lang=EN-US>%c</span>”，<span
+lang=EN-US>&amp;ch</span>）；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>//</span>从左到右扫描（读入）表达式。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd'><span
+lang=EN-US style='font-family:宋体'><span style='mso-spacerun:yes'>&nbsp; </span><b
+style='mso-bidi-font-weight:normal'>while</b></span><span style='font-family:
+宋体'>（<span lang=EN-US>ch</span>！<span lang=EN-US>=</span>‘<span lang=EN-US>#</span>’）<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>//</span>‘<span lang=EN-US>#</span>’是表达式结束符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:43.0pt;mso-char-indent-count:3.77'><span
+lang=EN-US style='font-family:宋体'>{<b style='mso-bidi-font-weight:normal'>switch</b></span><span
+style='font-family:宋体'>（<span lang=EN-US>ch</span>）<span lang=EN-US>of <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<b
+style='mso-bidi-font-weight:normal'>case</b>‘A’: <b style='mso-bidi-font-weight:
+normal'>case</b> </span><span style='font-family:宋体'>‘<span lang=EN-US>B</span>’<span
+lang=EN-US>: <b style='mso-bidi-font-weight:normal'>case</b> </span>‘<span
+lang=EN-US>C</span>’<span lang=EN-US>: //ch</span>是变量<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:119.7pt;mso-char-indent-count:10.5'><span
+lang=EN-US style='font-family:宋体'>TY=0</span><span style='font-family:宋体'>；<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span>变量类码为<span lang=EN-US>0<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span><b style='mso-bidi-font-weight:normal'>for</b></span><span
+style='font-family:宋体'>（<span lang=EN-US>i=1</span>；<span lang=EN-US>i&lt;=NAMEL.last</span>；<span
+lang=EN-US>i++</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:137.3pt;mso-char-indent-count:12.0'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>if</span></b><span
+style='font-family:宋体'>（<span lang=EN-US>NAMEL.data[i]==ch</span>）<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>break</span></b>；<span
+lang=EN-US>//</span>已有该变量，<span lang=EN-US>i</span>记住其位置<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b
+style='mso-bidi-font-weight:normal'>if</b></span><span style='font-family:宋体'>（<span
+lang=EN-US>i&gt;NAMEL.last</span>）<span lang=EN-US>{NAMEL.data[i]=ch</span>；<span
+lang=EN-US>NAMEL.last++</span>；<span lang=EN-US>}//</span>变量加入<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt'><span lang=EN-US style='font-family:宋体'><span
+style='mso-spacerun:yes'>&nbsp; </span><b style='mso-bidi-font-weight:normal'>case</b>‘0’:
+<b style='mso-bidi-font-weight:normal'>case</b>‘1’: <b style='mso-bidi-font-weight:
+normal'>case</b>‘2’: <b style='mso-bidi-font-weight:normal'>case</b>‘3’: <b
+style='mso-bidi-font-weight:normal'>case</b>‘4’: <b style='mso-bidi-font-weight:
+normal'>case</b>‘5’://</span><span style='font-family:宋体'>处理常量<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:31.9pt;mso-char-indent-count:2.79'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体'>case</span></b><span
+lang=EN-US style='font-family:宋体'>‘6’: <b style='mso-bidi-font-weight:normal'>case</b>
+‘7’:<b style='mso-bidi-font-weight:normal'>case</b>‘8’: <b style='mso-bidi-font-weight:
+normal'>case</b>‘9’: TY=1</span><span style='font-family:宋体'>；<span lang=EN-US>//</span>常量类码为<span
+lang=EN-US>1<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt;tab-stops:36.0pt 45.0pt'><span style='font-family:宋体'>　　<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span><b style='mso-bidi-font-weight:normal'>for</b></span>（<span
+lang=EN-US>i=1</span>；<span lang=EN-US>i&lt;=CONSL.last</span>；<span
+lang=EN-US>i++</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:112.35pt;mso-char-indent-count:9.82;tab-stops:36.0pt 45.0pt'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体'>if</span></b><span
+style='font-family:宋体'>（<span lang=EN-US>CONSL.data[i]==ch</span>）<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>break</span></b>；<span
+lang=EN-US>////</span>已有该常量，<span lang=EN-US>i</span>记住其位置<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt'><span style='font-family:宋体'>　<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span><b style='mso-bidi-font-weight:normal'>if</b></span>（<span
+lang=EN-US>i&gt;CONSL.last</span>）｛<span lang=EN-US>CONSL.data[i]=ch</span>；<span
+lang=EN-US>CONSL.last++</span>；｝<span lang=EN-US>//</span>将新常量加入<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt'><span style='font-family:宋体'>　<b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>default</span></b><span lang=EN-US>:<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>//</span>处理运算符<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt'><span style='font-family:宋体'>　<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>TY</span>＝<span lang=EN-US>operator</span>（<span
+lang=EN-US>ch</span>）；<span lang=EN-US>//</span>类码序号<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:22.8pt;mso-para-margin-left:2.0gd;
+text-indent:42.75pt;mso-char-indent-count:3.75'><span style='font-family:宋体'>　<span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>i=’\0’</span>；<span
+lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//</span>填入<span lang=EN-US>TOKEN</span>的<span lang=EN-US>addr</span>域（期望输出空白）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:50.95pt;mso-char-indent-count:4.47'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>结束<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>switch</span></b>，下面将<span
+lang=EN-US>ch</span>填入<span lang=EN-US>TOKEN</span>表<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:43.0pt;mso-char-indent-count:3.77'><span
+lang=EN-US style='font-family:宋体'>TOKEN.data</span><span style='font-family:
+宋体'>［<span lang=EN-US>++TOKEN.last</span>］<span lang=EN-US>.typ=TY</span>；<span
+lang=EN-US>TOKEN.data</span>［<span lang=EN-US>TOKEN.last</span>］<span
+lang=EN-US>.addr=i</span>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:43.0pt;mso-char-indent-count:3.77'><span
+lang=EN-US style='font-family:宋体'>scanf</span><span style='font-family:宋体'>（“％<span
+lang=EN-US>c</span>”，<span lang=EN-US>&amp;ch</span>）；<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>//</span>读入表达式的下一符号。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:37.4pt;mso-char-indent-count:3.28'><span
+lang=EN-US style='font-family:宋体'>}//<b style='mso-bidi-font-weight:normal'>while</b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:28.15pt;mso-char-indent-count:2.47'><span
+lang=EN-US style='font-family:宋体'>}//</span><span style='font-family:宋体'>算法结束<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:22.8pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:宋体'>[</span><span style='font-family:宋体'>程序讨论<span
+lang=EN-US>]</span>为便于讨论，各一维数组下标均以<span lang=EN-US>1</span>开始，在字符为变量或常量的情况下，将其类码用<span
+lang=EN-US>TY</span>记下，用<span lang=EN-US>i</span>记下其<span lang=EN-US>NAMEL</span>表或<span
+lang=EN-US>CONSL</span>表中的位置，以便在填<span lang=EN-US>TOKEN</span>表时用。在运算符（‘<span
+lang=EN-US>+</span>’，‘<span lang=EN-US>*</span>’，‘（’，‘）’）填入<span lang=EN-US>TOKEN</span>表时，<span
+lang=EN-US>TOKEN</span>表的<span lang=EN-US>addr</span>域没意义，为了程序统一，这里填入了<span
+lang=EN-US>’\0’</span>。本题是表达式处理的简化情况（只有<span lang=EN-US>3</span>个单字母变量，常量只有<span
+lang=EN-US>0..9</span>，操作符只<span lang=EN-US>4</span>个），若是真实情况，所用数据结构要相应变化。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+</div>
+
+</body>
+
+</html>
