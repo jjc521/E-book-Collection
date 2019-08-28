@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://www.cnblogs.com/magic-cube/archive/2011/10/19/2217676.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>汇编--INT 10H功能 - MagiCube - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./汇编--INT 10H功能 - MagiCube - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./汇编--INT 10H功能 - MagiCube - 博客园_files/bundle-iMetro_HD.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./汇编--INT 10H功能 - MagiCube - 博客园_files/bundle-iMetro_HD-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/magic-cube/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/magic-cube/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/magic-cube/wlwmanifest.xml">
+<script async="" src="./汇编--INT 10H功能 - MagiCube - 博客园_files/analytics.js"></script><script src="./汇编--INT 10H功能 - MagiCube - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'magic-cube', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./汇编--INT 10H功能 - MagiCube - 博客园_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/magic-cube/"><img id="blogLogo" src="./汇编--INT 10H功能 - MagiCube - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/magic-cube/">飞翔的翅膀</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/magic-cube/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/MagiCube">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/magic-cube/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/magic-cube/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 77&nbsp; </span>
+<span id="stats_article_count">文章 - 1&nbsp; </span>
+<span id="stats-comment_count">评论 - 3</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/magic-cube/archive/2011/10/19/2217676.html">汇编--INT 10H功能</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>INT 10H 是由 BIOS 对屏幕及显示器所提供的服务程序，而后倚天公司针对倚天中文提供了许多服务程序，这些服务程序也加挂在 INT 10H 内。使用 INT 10H 中断服务程序时，先指定 AH 寄存器为下表编号其中之一，该编号表示欲调用的功用，而其他寄存器的详细说明，参考表后文字，当一切设定好之后再调用 INT 10H。底下是它们的说明：</p>
+<table style="width: 100%;" bgcolor="#993333" border="0" cellpadding="0" cellspacing="1">
+<tbody>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center"><span style="color: #cc0033;" color="#cc0033">AH</span></div>
+</td>
+<td class="pt9-black" width="160">
+<div align="center"><span style="color: #cc0033;" color="#cc0033">功 能</span></div>
+</td>
+<td class="pt9-black" width="309">
+<div align="center"><span style="color: #cc0033;" color="#cc0033">调用参数</span></div>
+</td>
+<td class="pt9-black" width="207">
+<div align="center"><span style="color: #cc0033;" color="#cc0033">返回参数 / 注释</span></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">1</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　置光标类型</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　（CH）0―3 = 光标开始行<br> 　　（CL）0―3 = 光标结束行</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left"></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">2</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　置光标位置</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　BH = 页号 <br> 　　DH = 行<br> 　　DL = 列 　</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left"></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">3</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　读光标位置</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　BH = 页号</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left">　CH = 光标开始行<br> 　CL = 光标结束行<br> 　DH = 行<br> 　DL = 列</div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">4</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">&nbsp;&nbsp; 读光笔位置</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left"><span style="color: #8080c0;" color="#8080c0">AH=0 光笔未触发<br>
+            =1 光笔触发<br>
+            CH=象素行<br>
+            BX=象素列<br>
+            DH=字符行<br>
+            DL=字符列</span></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" height="26" width="65">
+<div align="center">5</div>
+</td>
+<td class="pt9-black" height="26" width="160">
+<div align="left">　显示页</div>
+</td>
+<td class="pt9-black" height="26" width="309">
+<div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL = 显示页号</div>
+</td>
+<td class="pt9-black" height="26" width="207">
+<div align="left"></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">6</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　屏幕初始化或上卷</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　AL = 上卷行数 <br> 　　AL =0全屏幕为空白 <br> 　　BH = 卷入行属性<br> 　　CH = 左上角行号 <br> 　　CL = 左上角列号 <br> 　　DH = 右下角行号 <br> 　　DL = 右下角列号</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left"></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">7</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　屏幕初始化或下卷</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　AL = 下卷行数<br> 　　AL = 0全屏幕为空白 <br> 　　BH = 卷入行属性<br> 　　CH = 左上角行号 <br> 　　CL = 左上角列号 <br> 　　DH = 右下角行号 <br> 　　DL = 右下角列号</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left"></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">8</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　读光标位置的属性和字符</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　BH = 显示页</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left">　AH = 属性<br> 　AL = 字符</div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">9</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　在光标位置显示字符及其属性</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　BH = 显示页<br> 　　AL = 字符<br> 　　BL = 属性<br> 　　CX = 字符重复次数</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left"></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">A</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　在光标位置只显示字符</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　BH = 显示页<br> 　　AL = 字符 <br> 　　CX = 字符重复次数</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left"></div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">E</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　显示字符(光标前移)</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　AL = 字符<br> 　　BL = 前景色</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left">　光标跟随字符移动</div>
+</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td class="pt9-black" width="65">
+<div align="center">13</div>
+</td>
+<td class="pt9-black" width="160">
+<div align="left">　显示字符串</div>
+</td>
+<td class="pt9-black" width="309">
+<div align="left">　　ES:BP = 串地址 <br> 　　CX = 串长度 <br> 　　DH， DL = 起始行列 <br> 　　BH = 页号<br> 　　AL = 0，BL = 属性 <br> 　　串：Char，char，……，char<br> 　　AL = 1，BL = 属性 <br> 　　串：Char，char，……，char <br> 　　AL = 2 <br> 　　串：Char，attr，……，char，attr <br> 　　AL = 3 <br> 　　串：Char，attr，……，char，attr</div>
+</td>
+<td class="pt9-black" width="207">
+<div align="left">
+<p></p>
+<p><br> <br> <br> <br> 　光标返回起始位置<br> <br> 　光标跟随移动<br> <br> <br> 　光标返回起始位置<br> <br> <br> 　光标跟随串移动</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>AH=00H</h3>
+<p>AH=00/INT 10H 是用来设定显示模式的服务程序，AL 寄存器表示欲设定的模式：</p>
+<p></p>
+<table class="gen" align="center" border="2">
+<tbody>
+<tr align="center">
+<td class="cellgen">AL</td>
+<td class="cellgen">文字/图形</td>
+<td class="cellgen">分辨率</td>
+<td class="cellgen">颜色</td>
+</tr>
+<tr>
+<td class="cellgen">00</td>
+<td class="cellgen">文字</td>
+<td class="cellgen">40*25</td>
+<td class="cellgen">2</td>
+</tr>
+<tr>
+<td class="cellgen">01</td>
+<td class="cellgen">文字</td>
+<td class="cellgen">40*25</td>
+<td class="cellgen">16</td>
+</tr>
+<tr>
+<td class="cellgen">02</td>
+<td class="cellgen">文字</td>
+<td class="cellgen">80*25</td>
+<td class="cellgen">2</td>
+</tr>
+<tr>
+<td class="cellgen">03</td>
+<td class="cellgen">文字</td>
+<td class="cellgen">80*25</td>
+<td class="cellgen">16</td>
+</tr>
+<tr>
+<td class="cellgen">04</td>
+<td class="cellgen">图形</td>
+<td class="cellgen">320*200</td>
+<td class="cellgen">2</td>
+</tr>
+<tr>
+<td class="cellgen">05</td>
+<td class="cellgen">图形</td>
+<td class="cellgen">320*200</td>
+<td class="cellgen">4</td>
+</tr>
+<tr>
+<td class="cellgen">06</td>
+<td class="cellgen">图形</td>
+<td class="cellgen">640*200</td>
+<td class="cellgen">2</td>
+</tr>
+</tbody>
+</table>
+<h3>AH=01H</h3>
+<p>您可以把光标想成一个小的矩形，平时这个矩形扁平位于某字底部，但藉由此功能可以改变其大小与位置。光标起始处与终止处分别由 CL 与 CH 的 0 到 4 位表示，参考下图：</p>
+<center></center>
+<p>而 CH 的第 7 位必须是 0，第 5、6 位表示光标属性：</p>
+<pre class="code">位 6&nbsp;&nbsp;&nbsp;&nbsp;   位 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   属性
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   正常
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   隐形
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   闪烁缓慢</pre>
+<h3><a name="02"><span style="color: #000000;" color="#000000">AH=02H</span></a></h3>
+<p>此功能是设定光标位置，位置用 DH、DL 表示，DH 表示列号，DL 表示行号。由左至右称之为『列』，屏幕最上面一列为第零列，紧靠第零列的下一列称为第一列……；由上而下称之为『行』，屏幕最左边一行称之为第零行，紧靠 第零行右边的一行为第一行。故最左边，最上面的位置为 DH=0 且 DL=0；最左边第二列，DH=1，DL=0。如果是文字模式时，BH 为欲改变光标位置的显示页，如果是图形模式，BH 要设为 0。</p>
+<p>以行列来说明 DH、DL 之意义，小木偶常常搞混，底下以座标方式解释。在文字模式下，字符的位置类似数学直角座标系的座标，但是 Y 轴方向相反，Y 轴是以屏幕最上面为零，越下面越大，直到 24 为止，存于 DH 内。X 轴和直角座标系相同，越右边越大，存于 DL 内，其最大值视显示模式而变。</p>
+<h3>AH=03H</h3>
+<p>AH=03H/INT 10H 这个中断服务程序返回时，会在 DX 里面有光标的行列位置，CX 内有光标的大小，DX、CX 之数值所代表的意义和 AH=02H/INT 10H、AH=01H/INT 10H 相同。</p>
+<h3>AH=04H</h3>
+<p>此功能是探测光笔之位置，似乎只有 CGA 卡有接上光笔？？</p>
+<h3>AH=05H</h3>
+<p>这个功能是把指定的显示页显示于屏幕上，欲显示的显示页于 AL 寄存器中指定。此功能只能在文字模式下才能发生作用。</p>
+<h3>AH=06H/07H</h3>
+<p>这个服务程序的功用是把某一个设定好的矩形区域内的文字向上或向下移动。先说明向上移动，即调用 AH=06H/INT 10H。当此服务程序工作时，会使矩形区域的文字向上移动，而矩形区域底端移进空格列。向上移动的列数存入 AL 中 ( 如果 AL 为零，表示使矩形区域的所有列均向上移 )，底端移入空格列的属性存于 BH，矩形区域是藉由 CX、DX 来设定左上角与右上角的座标，左上角的行与列分别由 CL、CH 设定，右下角的行与列由 DL、DH 设定。</p>
+<p>AH=07H/INT 10H 和 AH=06H/INT 10H 相似，只是卷动方像不同而已。</p>
+<h3>AH=08H</h3>
+<p>这个服务程序是用来取得光标所在位置的字符及属性，调用前，BH 表示欲读取之显示页，返回时，AL 为该位置之 ASCII 字符，AH 为其属性。有关属性的说明，请参考<a>注一</a>。</p>
+<h3>AH=09H</h3>
+<p>这个功能是在光标位置显示字符，所要显示字符的 ASCII 码存于 AL 寄存器，字符重复次数存于 CX 寄存器，显示页存于 BH 寄存器，属性存于 BL 寄存器，其属性使用与 AH=08/INT 10H 一样。</p>
+<h3>AH=0AH</h3>
+<p>这个功能和 AH=09H/INT 10H 一样，差别在 AH=0AH 只能写入一个字符，而且不能改变字符属性。</p>
+<h3>AH=0BH</h3>
+<p>这个服务程序是选择调色盘。显示模式 5 是 320*200 的图形模式，最多可以显示 4 种颜色，这四种颜色的意思是最多可以『同时』显示一种背景色及三种前景色，而这三种前景色有两种方式可供选择，因此事实上，在显示模式 5 有两种调色盘可供选择。就好像您去买 12 种颜色的水彩，但可在调色盘上以任意比例搭配出许多种颜色。</p>
+<p>调色盘 0 的三色是绿、红、黄；调色盘 1 的三色是青、紫红、白。背景色有 16 六种可供选择，这 16 种就是<a>注一</a>的 16 色。调用此中断时，先决定要设定背景色抑或调色盘，</p>
+<ul>
+<li>要设定背景色时，则使 BH 为 0，再使 BL 之数值为 0 到 0fh 之间表示<a>注一</a>的 16 色之一。</li>
+<li>要设定调色盘时，则使 BH 为 1。再设定 BL 为零或一表示选择那一种调色盘。</li>
+</ul>
+<p>背景色只有在前景色为 0 时才会显现出来。</p>
+<h3>AH=0CH</h3>
+<p>AH=0Ch/INT 10H 是在绘图模式中显示一点 ( 也就是写入点像，write graphics pixel )，而 AH=0DH/INT 10H 则是读取点像 ( read graphics pixel )。</p>
+<p>写入时，要写入位置 X 座标存于 CX 寄存器，Y 座标存于 DX 寄存器，颜色存于 AL 寄存器。和文字模式相同，萤光幕上的 Y 座标是最上面一列为零，越下面越大，X 座标则和数学的定义相同。CX、DX、AL 值之范围与显示模式有关：</p>
+<p></p>
+<table style="width: 60%;" class="gen" align="center" border="2" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="field" align="center" width="20%">显示模式</td>
+<td class="field" align="center" width="30%">X 座标</td>
+<td class="field" align="center" width="30%">Y 座标</td>
+<td class="field" align="center">颜色</td>
+</tr>
+<tr align="center">
+<td class="cellgen">4</td>
+<td class="cellgen">0～319</td>
+<td class="cellgen">0～199</td>
+<td class="cellgen">0、1</td>
+</tr>
+<tr align="center">
+<td class="cellgen">5</td>
+<td class="cellgen">0～319</td>
+<td class="cellgen">0～199</td>
+<td class="cellgen">0～3</td>
+</tr>
+<tr align="center">
+<td class="cellgen">6</td>
+<td class="cellgen">0～639</td>
+<td class="cellgen">0～199</td>
+<td class="cellgen">0、1</td>
+</tr>
+</tbody>
+</table>
+<p>AH=0DH/INT 10H 则是读取某一位置之点像，您必须指定 CX、DX，而 INT 10H 会传回该位置点像之颜色。</p>
+<h3>AH=0EH</h3>
+<p>这个子程序是使显示器像打字机一样的显示字符来，在前面用 AH=09H/INT 10H 和 AH=0AH/INT 10H 都可以在萤光幕上显示字符，但是这两奘方式显示字符之后，光标位置并不移动，而 AH=0EH/INT 10H 则会使光标位置移动，每显示一个字符，光标会往右移一格，假如已经到最右边了，则光标会移到最左边并移到下一列，假如已经移到最下面一列的最右边，则屏幕 会向上卷动。</p>
+<p>AL 寄存器存要显示的字符，BH 为目前的显示页，如果是在图形模式，则 BH 须设为 0，假如是在图形模式下，也可以设定 BL 来表示文字的颜色，文字模式下的 BL 则无功能。</p>
+<h3>AH=0FH</h3>
+<p>这个服务程序是得到目前的显示模式，调用前只需使 AH 设为 0fh，当由 INT 10H 返回时，显示模式存于 AL 寄存器 ( 参考 AH=00H/INT 10H 的显示模式表 )，目前的显示页存于 BH 寄存器，总字符行数存于 AH 寄存器。</p>
+<hr>
+<p><a name="note1"><span class="note"><span style="color: #000000;" color="#000000">注一：</span></span></a> 所谓属性是指字符的颜色、背景颜色、是否闪烁、有没有底线等性质。在彩色显示卡 ( CGA/EGA/VGA 等 ) 的文字模式中，颜色是用 4 个位表示，故可以表现出 16 种颜色，如下表：</p>
+<p></p>
+<table style="width: 80%;" class="gen" align="center" border="2" cellpadding="0" cellspacing="0">
+<tbody>
+<tr align="center">
+<td class="field" width="15%">二进制数</td>
+<td class="field" width="15%">颜色</td>
+<td class="field" width="20%">例子</td>
+<td class="field" width="15%">二进制数</td>
+<td class="field" width="15%">颜色</td>
+<td class="field" width="20%">例子</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0000</td>
+<td class="cellgen">黑色</td>
+<td class="cellgen" style="color: black;">black</td>
+<td class="cellgen">1000</td>
+<td class="cellgen">灰色</td>
+<td class="cellgen" style="color: #808080;">gray</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0001</td>
+<td class="cellgen">蓝色</td>
+<td class="cellgen" style="color: #000080;">blue</td>
+<td class="cellgen">1001</td>
+<td class="cellgen">淡蓝色</td>
+<td class="cellgen" style="color: #0000ff;">light blue</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0010</td>
+<td class="cellgen">绿色</td>
+<td class="cellgen" style="color: #008000;">green</td>
+<td class="cellgen">1010</td>
+<td class="cellgen">淡绿色</td>
+<td class="cellgen" style="color: #00ff00;">light green</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0011</td>
+<td class="cellgen">青色</td>
+<td class="cellgen" style="color: #008080;">cyan</td>
+<td class="cellgen">1000</td>
+<td class="cellgen">淡青色</td>
+<td class="cellgen" style="color: #00ffff;">light cyan</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0100</td>
+<td class="cellgen">红色</td>
+<td class="cellgen" style="color: #800000;">red</td>
+<td class="cellgen">1100</td>
+<td class="cellgen">淡红色</td>
+<td class="cellgen" style="color: #ff0000;">light red</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0101</td>
+<td class="cellgen">紫红色</td>
+<td class="cellgen" style="color: #800080;">magenta</td>
+<td class="cellgen">1101</td>
+<td class="cellgen">淡紫红色</td>
+<td class="cellgen" style="color: #ff00ff;">light magenta</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0110</td>
+<td class="cellgen">棕色</td>
+<td class="cellgen" style="color: #808000;">brown</td>
+<td class="cellgen">1110</td>
+<td class="cellgen">黄色</td>
+<td class="cellgen" style="color: #ffff00;">yellow</td>
+</tr>
+<tr align="center">
+<td class="cellgen">0111</td>
+<td class="cellgen">银色</td>
+<td class="cellgen" style="color: #c0c0c0;">light gray</td>
+<td class="cellgen">1111</td>
+<td class="cellgen">白色</td>
+<td class="cellgen" style="color: #ffffff;">white</td>
+</tr>
+</tbody>
+</table>
+<p>在彩色显示器里，如 CGA、EGA、VGA 等，常用一个字节 ( 8 个位 ) 来表示文字颜色和背景颜色，通常以第 0～3 位表示文字本身颜色；第 4～6 位表示背景颜色，背景颜色只有上表左栏的 8 种而已；第 7 个位，表示是否闪烁，0 表示不闪烁，1 表示闪烁。</p>
+<p>但是在单色显示器里，如 MDA 和 Hercules 卡中，这些颜色表并无意义，所以属性解释方式不同，请看下表：</p>
+<p></p>
+<table style="width: 50%;" class="gen" align="center" border="2" cellpadding="0" cellspacing="0">
+<tbody>
+<tr align="center">
+<td class="field" width="30%">数值</td>
+<td class="field">属性</td>
+</tr>
+<tr>
+<td class="cellgen" align="center">00H</td>
+<td class="cellgen">空格，不显示任何数据</td>
+</tr>
+<tr>
+<td class="cellgen" align="center">77H</td>
+<td class="cellgen">显示白色方块</td>
+</tr>
+<tr>
+<td class="cellgen" align="center">07H</td>
+<td class="cellgen">正常的黑底白字</td>
+</tr>
+<tr>
+<td class="cellgen" align="center">70H</td>
+<td class="cellgen">反白的白底黑字</td>
+</tr>
+<tr>
+<td class="cellgen" align="center">01H</td>
+<td class="cellgen">加底线</td>
+</tr>
+</tbody>
+</table></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/magic-cube/category/328877.html" target="_blank">一个操作系统的实现</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(2217676,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;03589acc-51e7-df11-ac81-842b2b196315&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./汇编--INT 10H功能 - MagiCube - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./汇编--INT 10H功能 - MagiCube - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/magic-cube/" target="_blank"><img src="./汇编--INT 10H功能 - MagiCube - 博客园_files/u185045.bmp" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/magic-cube/">MagiCube</a><br>
+            <a href="http://home.cnblogs.com/u/magic-cube/followees">关注 - 7</a><br>
+            <a href="http://home.cnblogs.com/u/magic-cube/followers">粉丝 - 21</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;03589acc-51e7-df11-ac81-842b2b196315&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(2217676,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(2217676,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/magic-cube/archive/2011/10/19/2217654.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/magic-cube/archive/2011/10/19/2217654.html" title="发布于2011-10-19 14:40">NASM汇编笔记</a><br><a href="http://www.cnblogs.com/magic-cube/archive/2011/10/22/2221298.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/magic-cube/archive/2011/10/22/2221298.html" title="发布于2011-10-22 17:53">jmp、call、ret、retf解析</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2011-10-19 14:59</span> <a href="http://www.cnblogs.com/magic-cube/">MagiCube</a> 阅读(<span id="post_view_count">22556</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=2217676" rel="nofollow">编辑</a> <a href="https://www.cnblogs.com/magic-cube/archive/2011/10/19/2217676.html#" onclick="AddToWz(2217676);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=88009,cb_entryId=2217676,cb_blogApp=currentBlogApp,cb_blogUserGuid='03589acc-51e7-df11-ac81-842b2b196315',cb_entryCreatedDate='2011/10/19 14:59:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/magic-cube/archive/2011/10/19/2217676.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/magic-cube/archive/2011/10/19/2217676.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://xc.hubwiz.com/course/592ee9b2b343f27b0ae1ba99?affid=cnblogs" target="_blank">【推荐】Vue.js 2.x 快速入门，大量高效实战示例</a><br><a href="https://cloud.tencent.com/act/campus?fromSource=gwzcw.613398.613398.613398" target="_blank">【活动】腾讯云 学生专属优惠套餐 多规格选择</a><br><a href="https://cloud.tencent.com/community/article/303682?fromSource=gwzcw.614532.614532.614532" target="_blank">【活动】释放技术的想象-解码腾讯云软件架构与应用</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="http://www.gcpowertools.com.cn/products/spreadservices/?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=Spreadbiaoge&amp;utm_campaign=community" target="_blank"><img width="300" height="250" src="./汇编--INT 10H功能 - MagiCube - 博客园_files/24442-20171114102308171-1147697076.png" alt="葡萄城1114"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/582859/" target="_blank">TCL投资96亿元建面板基地 年产最高6000万片</a><br> ·  <a href="http://news.cnblogs.com/n/582854/" target="_blank">下一代iPhone X会有哪些黑科技？</a><br> ·  <a href="http://news.cnblogs.com/n/582858/" target="_blank">明年iPhone网速大提速 英特尔将获八成基带订单</a><br> ·  <a href="http://news.cnblogs.com/n/582857/" target="_blank">我国超算再获国际最高奖：实现对唐山大地震精确模拟</a><br> ·  <a href="http://news.cnblogs.com/n/582856/" target="_blank">卡车货运的未来：无人驾驶技术和卡车司机如何配合</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="http://click.aliyun.com/m/34771/" target="_blank"><img width="468" height="60" src="./汇编--INT 10H功能 - MagiCube - 博客园_files/24442-20171113120112796-634832761.jpg" alt="阿里云1113"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/112506/" target="_blank">大道至简，职场上做人做事做管理</a><br> ·  <a href="http://kb.cnblogs.com/page/563790/" target="_blank">关于编程，你的练习是不是有效的？</a><br> ·  <a href="http://kb.cnblogs.com/page/581467/" target="_blank">改善程序员生活质量的 3+10 习惯</a><br> ·  <a href="http://kb.cnblogs.com/page/568841/" target="_blank">NASA的10条代码编写原则</a><br> ·  <a href="http://kb.cnblogs.com/page/578502/" target="_blank">为什么你参加了那么多培训，却依然表现平平？</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/magic-cube/">MagiCube</a><br>园龄：<a href="http://home.cnblogs.com/u/magic-cube/" title="入园时间：2010-11-03">7年</a><br>粉丝：<a href="http://home.cnblogs.com/u/magic-cube/followers/">21</a><br>关注：<a href="http://home.cnblogs.com/u/magic-cube/followees/">7</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;03589acc-51e7-df11-ac81-842b2b196315&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2011/09/01&#39;);return false;">&lt;</a></td><td align="center">2011年10月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2011/11/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center"><a href="http://www.cnblogs.com/magic-cube/archive/2011/10/19.html"><u>19</u></a></td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/magic-cube/archive/2011/10/22.html"><u>22</u></a></td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center"><a href="http://www.cnblogs.com/magic-cube/archive/2011/10/25.html"><u>25</u></a></td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalWeekendDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/magic-cube/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/magic-cube/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/magic-cube/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/magic-cube/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/magic-cube/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/magic-cube/tag/WinForm/">WinForm</a>(4)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/%E5%8F%8B%E5%85%83%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E/">友元函数声明</a>(3)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/%E7%B1%BB%E6%A8%A1%E7%89%88/">类模版</a>(3)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/SQL/">SQL</a>(3)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/DevExpress/">DevExpress</a>(2)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/doxygen/">doxygen</a>(1)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/ExecuteNonQuery/">ExecuteNonQuery</a>(1)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/Expression/">Expression</a>(1)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/fixed%20trait/">fixed trait</a>(1)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/ftp/">ftp</a>(1)</li><li><a href="http://www.cnblogs.com/magic-cube/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/magic-cube/category/331961.html">C++ template(10)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/magic-cube/category/310360.html">Flash AIR(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/magic-cube/category/316925.html">Google Map(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/magic-cube/category/344973.html">Hg SCM(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/magic-cube/category/317150.html">JavaScript(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/magic-cube/category/338190.html">Java相关(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/magic-cube/category/333530.html">matlab相关(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/magic-cube/category/310369.html">MFC(VC.NET)(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/magic-cube/category/310370.html">MFC(VC6.0)(21)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/magic-cube/category/347029.html">Nso office control(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/magic-cube/category/359670.html">OpenCV(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/magic-cube/category/347986.html">WinForm(9)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_12" href="http://www.cnblogs.com/magic-cube/category/340897.html">WTL(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_13" href="http://www.cnblogs.com/magic-cube/category/412274.html">笔试面试(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_14" href="http://www.cnblogs.com/magic-cube/category/296225.html">每日一记(5)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_15" href="http://www.cnblogs.com/magic-cube/category/345485.html">数据库(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_16" href="http://www.cnblogs.com/magic-cube/category/401013.html">算法学习</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_17" href="http://www.cnblogs.com/magic-cube/category/399303.html">网站空间(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_18" href="http://www.cnblogs.com/magic-cube/category/442064.html">系统安装(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_19" href="http://www.cnblogs.com/magic-cube/category/296006.html">心情</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_20" href="http://www.cnblogs.com/magic-cube/category/328877.html">一个操作系统的实现(8)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/magic-cube/archive/2012/12.html">2012年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/magic-cube/archive/2012/10.html">2012年10月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/magic-cube/archive/2012/08.html">2012年8月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/magic-cube/archive/2012/07.html">2012年7月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/magic-cube/archive/2012/06.html">2012年6月 (5)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/magic-cube/archive/2012/05.html">2012年5月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/magic-cube/archive/2012/03.html">2012年3月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/magic-cube/archive/2012/02.html">2012年2月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/magic-cube/archive/2012/01.html">2012年1月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/magic-cube/archive/2011/12.html">2011年12月 (9)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/magic-cube/archive/2011/11.html">2011年11月 (13)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/magic-cube/archive/2011/10.html">2011年10月 (5)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_12" href="http://www.cnblogs.com/magic-cube/archive/2011/08.html">2011年8月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_13" href="http://www.cnblogs.com/magic-cube/archive/2011/07.html">2011年7月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_14" href="http://www.cnblogs.com/magic-cube/archive/2011/05.html">2011年5月 (16)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_15" href="http://www.cnblogs.com/magic-cube/archive/2011/04.html">2011年4月 (9)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_articlecategory" class="catListArticleCategory sidebar-block">
+<h3 class="catListTitle">文章分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_2_Link_0" href="http://www.cnblogs.com/magic-cube/category/296005.html">ASP.NET</a> </li>
+
+<li><a id="CatList_LinkList_2_Link_1" href="http://www.cnblogs.com/magic-cube/category/296003.html">DirectX</a> </li>
+
+<li><a id="CatList_LinkList_2_Link_2" href="http://www.cnblogs.com/magic-cube/category/296004.html">Matlab</a> </li>
+
+<li><a id="CatList_LinkList_2_Link_3" href="http://www.cnblogs.com/magic-cube/category/296484.html">MFC(VC.NET)</a> </li>
+
+<li><a id="CatList_LinkList_2_Link_4" href="http://www.cnblogs.com/magic-cube/category/296001.html">MFC(VC6.0)</a> </li>
+
+<li><a id="CatList_LinkList_2_Link_5" href="http://www.cnblogs.com/magic-cube/category/296002.html">Win32</a> </li>
+
+<li><a id="CatList_LinkList_2_Link_6" href="http://www.cnblogs.com/magic-cube/category/296227.html">每日一记(2)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/magic-cube/archive/2011/11/01/2232280.html#3728798">1. Re:NASM汇编指令复习</a></li>
+        <li class="recent_comment_body">你在介绍宏定义的时候，举的例子里只定义了一个参数啊，为什么在宏体里，你却用了两个参数呢</li>
+        <li class="recent_comment_author">--天命之子</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/magic-cube/archive/2011/11/08/2241580.html#3306508">2. Re:matlab如何写一个类</a></li>
+        <li class="recent_comment_body">我也刚学习matlab，跟楼主学习<a href="https://www.cnblogs.com/magic-cube/archive/2011/10/19/2217676.html" target="_blank"></a></li>
+        <li class="recent_comment_author">--sourcecode_2345</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/magic-cube/archive/2011/04/27/2029908.html#2592025">3. Re:CMFCTabCtrl的使用</a></li>
+        <li class="recent_comment_body">你能不能给我一份源码呢？要用到您说的{设置CMFCTabCtrl表头的位置（上面还是下面）：}我通过属性设置，不能成功，邮箱wywangyun1124@163.com希望得到你的帮助，O(∩_∩)O谢......</li>
+        <li class="recent_comment_author">--曦花</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/10/19/2217676.html">1. 汇编--INT 10H功能(22556)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2012/03/03/2378546.html">2. OpenCV2.3.1+VS2008安装笔记(19191)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2012/07/26/2609669.html">3. 绑定域名到子目录(18211)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/11/08/2241580.html">4. matlab如何写一个类(12754)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2012/06/16/2552092.html">5. 将Windows Server2003安装在RAID（磁盘阵列）中(8937)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/04/27/2029908.html">1. CMFCTabCtrl的使用(1)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/11/08/2241580.html">2. matlab如何写一个类(1)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/11/01/2232280.html">3. NASM汇编指令复习(1)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/05/12/2044713.html">1. CString、LPCTSTR、LPTSTR、TCHAR、WCHAR、string、wchar_t、char解析(2)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/12/06/2278568.html">2. 预编译头的使用【转】(2)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/04/27/2029908.html">3. CMFCTabCtrl的使用(2)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/04/27/2029913.html">4. wparam和lparam的思考(1)</a></li><li><a href="http://www.cnblogs.com/magic-cube/archive/2011/10/19/2217654.html">5. NASM汇编笔记(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2017 MagiCube
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>
