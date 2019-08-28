@@ -1,0 +1,20 @@
+#!/usr/bin/env pinpoint
+
+[bg.jpg]
+[font=Sans 80px]
+[duration=5.000000]
+-- [duration=4.448699]
+<span foreground='blue'><b>第三章 数据类型、运算符与表达式</b></span>
+
+<span foreground="red">本章内容</span>
+ ✩ C 中的基本数据类型
+   ☃ 整型  ☃ 浮点型  ☃ 字符型  ———— <span foreground="red">重点 </span>
+ ✩ 常量与变量
+ ✩ 变量的初始化、各种类型数据的混合运算
+ ✩ C运算符简介
+ ✩ 算术运算符与算术表达式       ———— <span foreground='red'> 重点 </span>
+ ✩ 赋值运算符与赋值表达式       ———— <span foreground='red'> 重点 </span>
+ ✩ 逗号运算符与逗号表达式
+
+-- [duration=4]
+

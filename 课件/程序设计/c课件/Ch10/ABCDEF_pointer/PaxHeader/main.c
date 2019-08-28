@@ -1,0 +1,3 @@
+42 path=课件/Ch10/ABCDEF_pointer/main.c
+27 mtime=1478188564.372693
+27 atime=1478790840.337714

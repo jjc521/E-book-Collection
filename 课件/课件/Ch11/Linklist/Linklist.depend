@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1466602512 source:/home/chjj/Documents/work/课程/2016/春/C/课件/Ch11/Linklist/main.c
+	<stdio.h>
+	<stdlib.h>
+

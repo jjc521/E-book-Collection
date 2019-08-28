@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1479395782 source:/home/chjj/Documents/work/课程/2016/秋/C/课件/Ch07/Code/binary_search/main.c
+	<stdio.h>
+	<stdlib.h>
+
