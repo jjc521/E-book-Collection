@@ -1,0 +1,77 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 真实感图形学 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/真实感图形学.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\BLine.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\BRender.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\BTriangle.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\ColorBuffer.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\Lighting.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\Matrix3d.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\SubObject3d.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\TypedStack.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\ViewFinder.cpp"
+"D:\hqf\计算机图形学book\CGbook\ok\真实感图形学\真实感图形学View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14F.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP150.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/真实感图形学.pdb" /debug /machine:I386 /out:"Debug/真实感图形学.exe" /pdbtype:sept 
+".\Debug\BLine.obj"
+".\Debug\BRender.obj"
+".\Debug\BTriangle.obj"
+".\Debug\ColorBuffer.obj"
+".\Debug\Edge.obj"
+".\Debug\Facet.obj"
+".\Debug\FloatColor.obj"
+".\Debug\Lighting.obj"
+".\Debug\LightObj.obj"
+".\Debug\MainFrm.obj"
+".\Debug\Material.obj"
+".\Debug\Matrix3d.obj"
+".\Debug\Object3d.obj"
+".\Debug\Sphere.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SubObject3d.obj"
+".\Debug\TypedStack.obj"
+".\Debug\Vector3d.obj"
+".\Debug\Vertex3d.obj"
+".\Debug\ViewFinder.obj"
+".\Debug\ZBuffer.obj"
+".\Debug\真实感图形学.obj"
+".\Debug\真实感图形学Doc.obj"
+".\Debug\真实感图形学View.obj"
+".\Debug\真实感图形学.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP150.tmp"
+<h3>Output Window</h3>
+Compiling...
+BLine.cpp
+BRender.cpp
+BTriangle.cpp
+ColorBuffer.cpp
+Lighting.cpp
+Matrix3d.cpp
+SubObject3d.cpp
+TypedStack.cpp
+ViewFinder.cpp
+Generating Code...
+Compiling...
+真实感图形学View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+真实感图形学.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

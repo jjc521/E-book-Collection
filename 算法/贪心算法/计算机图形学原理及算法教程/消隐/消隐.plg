@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 消隐 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/消隐.res" /d "_DEBUG" /d "_AFXDLL" "D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP72.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/消隐.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP72.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP73.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/消隐.pdb" /debug /machine:I386 /out:"Debug/消隐.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\StdAfx.obj"
+".\Debug\消隐.obj"
+".\Debug\消隐Doc.obj"
+".\Debug\消隐View.obj"
+".\Debug\消隐.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP73.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+消隐View.cpp
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(117) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(118) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(125) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(126) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(239) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(240) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(241) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(242) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(243) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(244) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(384) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(398) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(401) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(432) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\和青芳\计算机图形学原理与算法编程案例教程光盘\消隐\消隐View.cpp(432) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+Linking...
+
+
+
+<h3>Results</h3>
+消隐.exe - 0 error(s), 15 warning(s)
+</pre>
+</body>
+</html>

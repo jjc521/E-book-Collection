@@ -1,0 +1,131 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 图形相交—相切 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP20.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/图形相交—相切.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP20.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP21.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/图形相交—相切.pdb" /debug /machine:I386 /out:"Debug/图形相交—相切.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\StdAfx.obj"
+".\Debug\图形相交—相切.obj"
+".\Debug\图形相交—相切Doc.obj"
+".\Debug\图形相交—相切View.obj"
+".\Debug\图形相交—相切.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP21.tmp"
+<h3>Output Window</h3>
+Compiling...
+图形相交—相切View.cpp
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(119) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(120) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(136) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(136) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(136) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(136) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(138) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(138) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(139) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(139) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(165) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(165) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(165) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(165) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(166) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(166) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(167) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(167) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(168) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(168) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(169) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(169) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(176) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(176) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(177) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(177) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(178) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(178) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(179) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(179) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(181) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(181) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(182) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(182) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(183) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(183) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(184) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(184) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(185) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(185) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(186) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(186) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(194) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(194) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(194) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(194) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(196) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(196) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(196) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(196) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(216) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(216) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(217) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(217) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(231) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(237) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(526) : warning C4305: 'initializing' : truncation from 'const double' to 'float'
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(533) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(544) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(544) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(545) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(545) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(550) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(551) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(552) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(560) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(560) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(561) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(561) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(565) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(565) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(566) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(566) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(576) : warning C4305: 'initializing' : truncation from 'const double' to 'float'
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(583) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(584) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(596) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(596) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(597) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(597) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(602) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(603) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(604) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(605) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(606) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(614) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(614) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(615) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(615) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(619) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(619) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(620) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(620) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\hqf\计算机图形学book\CGbook\ok\图形相交—相切\图形相交—相切View.cpp(349) : warning C4715: 'CMyView::PLC' : not all control paths return a value
+Linking...
+
+
+
+<h3>Results</h3>
+图形相交—相切.exe - 0 error(s), 94 warning(s)
+</pre>
+</body>
+</html>

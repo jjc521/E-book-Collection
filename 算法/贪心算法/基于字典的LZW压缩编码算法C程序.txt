@@ -1,0 +1,114 @@
+基于字典的LZW压缩编码算法C程序 
+时间: 2004-11-25 16:44:21 | [<<] [>>] 
+--------------------------------------------------------------------------------
+ 
+ 
+/************************************************************/
+/********    http://happyyangxu.home.sunbo.net                ************/
+/********                 2004/11                                          ************/
+/************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+FILE *fp1;
+FILE *fp2;
+struct word                                 /*字典项*/
+{
+    unsigned int n;                         /*前缀索引号4095表无前缀*/
+   unsigned char cha;
+}w,wd[4096];                                /*当前字串与字典*/
+unsigned int p;                             /*字典尾部指针*/
+unsigned int n;                        /*当前字典的索引号*/
+unsigned char h,m,l,f;      /*输出代码字节和拼装标志*/
+void out(int n)                             /*输出12bit字符*/
+{
+ if(f==0){
+  h=n/16;             /*拼装到前一个半字节*/
+  m=(n<<4)&0xf0;
+  f=1;
+ }
+ else{           /*拼装到后一个半字节*/
+  m+=n/256;
+  l=n&0xff;
+  fputc(h,fp2);      /*将拼装好的三个字节写入压缩文件中*/
+  fputc(m,fp2);
+  fputc(l,fp2);
+  h=m=l=f=0;  /*准备下一次拼装*/
+ }
+
+}
+void lzw()
+{
+ int c,i;
+ unsigned char ch;
+ printf("\n\n开始压缩!Start\n");
+ for(i=0;i<256;i++)      /*初始化字典前256项*/
+ {
+  wd.n=4095;
+  wd.cha=i;
+ }
+ p=256; /*初始化字典尾部指针*/
+ w.n=4095;        /*初始化当前字符串及其索引号*/
+ w.cha=n=fgetc(fp1);
+ h=m=l=f=0;        /*初始化输出代码和拼装标志*/
+ for(;;)
+ {
+  c=fgetc(fp1);
+  if(c==EOF)
+  {
+   out(n);
+   if(f)out(4095);     /*用无效代码填充结尾*/
+   printf("\n\n压缩完毕Finish\n");
+   return;
+  }
+     ch=c;
+     for(i=n+1;i<p;i++)
+       {
+          if(wd.n!=n)continue;
+       if(wd.cha==ch)break;
+        }
+        if(i!=p)
+          {
+          w.n=n;
+          w.cha=ch;
+          n=i;
+           }
+        else
+          {
+                out(n);
+          if(p<4095){
+          wd[p].n=n;
+          wd[p].cha=ch;
+          p++;
+          }
+          w.n=4095;
+          n=w.cha=ch;;
+           }
+ }
+}
+void main()
+{
+ char name[10];
+ clrscr();
+ printf("\n\n请输入待压缩的文件明名称Name:");
+ gets(name);
+ fp1=fopen(name,"rb");
+ if(fp1==NULL){
+  printf("\n\n源文件没有找到\nNot Found");
+  getch();
+  exit(1);
+ }
+ printf("\n\n请输入生成的压缩文件名称Name:");
+ gets(name);
+ fp2=fopen(name,"wb");
+ if(fp2==NULL){
+  printf("\n\n磁盘空间不够!Not Enough");
+  getch();
+  exit(1);
+ }
+ lzw();
+ fclose(fp1);
+ fclose(fp2);
+}
+
+ 
