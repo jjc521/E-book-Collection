@@ -1,67 +1,65 @@
-¾í DATA µÄÎÄ¼þ¼Ð PATH ÁÐ±í
-¾íÐòÁÐºÅÎª 467D-D1D4
-D:.
-©¦  909ii.rar
-©¦  ase.zip
-©¦  cced4.ain
-©¦  cced50.img
-©¦  cced503.zip
-©¦  cced5hlp.zip
-©¦  cced60.exe
-©¦  ccpb.rar
-©¦  cxed.zip
-©¦  dtp.zip
-©¦  ed95.zip
-©¦  fz601.rar
-©¦  hg4.rar
-©¦  hg6.rar
-©¦  juren.rar
-©¦  keyin.rar
-©¦  p123.zip
-©¦  pe2.zip
-©¦  pe3.rar
-©¦  qedit30.zip
-©¦  sc50.arj
-©¦  sidekick.zip
-©¦  sk20.rar
-©¦  stt.rar
-©¦  tbs31.rar
-©¦  ted12.zip
-©¦  ue.zip
-©¦  works.rar
-©¦  wp52.rar
-©¦  wp60.rar
-©¦  ws.zip
-©¦  ws4.rar
-©¦  ws6.rar
-©¦  ytt.txt
-©¦  ±à¼­ÓëÅÅ°æÈí¼þ.txt
-©¦  
-©À©¤pe2
-©¦      CPE2.EXE
-©¦      EXP1
-©¦      EXP2
-©¦      EXP3
-©¦      FYK
-©¦      NEX
-©¦      PE11.BAT
-©¦      PE2.EXE
-©¦      PE2.HLP
-©¦      PE2.PRO
-©¦      PE25.BAT
-©¦      PE2OVL.EXE
-©¦      PE2OVL11.EXE
-©¦      PE2OVL25.EXE
-©¦      
-©À©¤sidekick
-©¦      CHKLIST.CPS
-©¦      SK.COM
-©¦      SK.HLP
-©¦      SKINST.COM
-©¦      SKINST.MSG
-©¦      
-©¸©¤wp60
-    ©¸©¤WP60
+.
+â”‚  909ii.rar
+â”‚  ase.zip
+â”‚  cced4.ain
+â”‚  cced50.img
+â”‚  cced503.zip
+â”‚  cced5hlp.zip
+â”‚  cced60.exe
+â”‚  ccpb.rar
+â”‚  cxed.zip
+â”‚  dtp.zip
+â”‚  ed95.zip
+â”‚  fz601.rar
+â”‚  hg4.rar
+â”‚  hg6.rar
+â”‚  juren.rar
+â”‚  keyin.rar
+â”‚  p123.zip
+â”‚  pe2.zip
+â”‚  pe3.rar
+â”‚  qedit30.zip
+â”‚  sc50.arj
+â”‚  sidekick.zip
+â”‚  sk20.rar
+â”‚  stt.rar
+â”‚  tbs31.rar
+â”‚  ted12.zip
+â”‚  ue.zip
+â”‚  works.rar
+â”‚  wp52.rar
+â”‚  wp60.rar
+â”‚  ws.zip
+â”‚  ws4.rar
+â”‚  ws6.rar
+â”‚  ytt.txt
+â”‚  ç¼–è¾‘ä¸ŽæŽ’ç‰ˆè½¯ä»¶.txt
+â”‚  
+â”œâ”€pe2
+â”‚      CPE2.EXE
+â”‚      EXP1
+â”‚      EXP2
+â”‚      EXP3
+â”‚      FYK
+â”‚      NEX
+â”‚      PE11.BAT
+â”‚      PE2.EXE
+â”‚      PE2.HLP
+â”‚      PE2.PRO
+â”‚      PE25.BAT
+â”‚      PE2OVL.EXE
+â”‚      PE2OVL11.EXE
+â”‚      PE2OVL25.EXE
+â”‚      
+â”œâ”€sidekick
+â”‚      CHKLIST.CPS
+â”‚      SK.COM
+â”‚      SK.HLP
+â”‚      SKINST.COM
+â”‚      SKINST.MSG
+â”‚      
+â””â”€wp60
+    â””â”€WP60
             INSTALL.DAT
             INSTALL.EXE
             INSTALL.LST
