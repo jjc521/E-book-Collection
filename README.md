@@ -1,2 +1,3 @@
 # E-book-Collection
- E-book-Collection 电子书收藏
+ 电子书收藏
+ 压缩均采用zip格式
