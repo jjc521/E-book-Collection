@@ -1,6 +1,4 @@
-卷 DATA 的文件夹 PATH 列表
-卷序列号为 467D-D1D4
-D:.
+.
 │  .gitattributes
 │  ASUS-GL552VW.pdf
 │  fx-991CN_X_CN.pdf
